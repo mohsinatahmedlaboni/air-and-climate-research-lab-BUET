@@ -121,7 +121,7 @@ window.PEOPLE = [
       ["LinkedIn", "https://www.linkedin.com/in/mohsinat-ahmed-laboni"],
       ["Google Scholar", "https://scholar.google.com/citations?user=O_qegIwAAAAJ"]
     ]
-  }
+  },
 
   {
     group: "Advisors",
