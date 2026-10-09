@@ -46,7 +46,7 @@ window.PEOPLE = [
     role: "Principal Investigator",
     affiliation: "Bangladesh University of Engineering and Technology (BUET)",
     email: "smrahman@ce.buet.ac.bd",
-    photo: "provat-saha.jpg",
+    photo: "mokhlesur-rahman.jpg",
     bio: "Dr. Sheikh Mokhlesur Rahman is the principal investigator of the HEAT project. He received his Bachelor’s and Master’s degrees in Civil Engineering from BUET, followed by a PhD in Environmental Engineering from Northeastern University. His PhD research focused on applying data mining and machine learning approaches to assess, characterize, and predict chemical toxicity from toxicogenomic data. Currently, he is serving as a Professor in the Department of Civil Engineering at BUET, specializing in Environmental Engineering.",
     interests: ["Environmental data analysis", "Life cycle assessment", "Pollution management", "Sustainable Development"],
     links: [
