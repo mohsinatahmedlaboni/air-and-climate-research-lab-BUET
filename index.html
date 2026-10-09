@@ -128,7 +128,7 @@ canvas.air{position:absolute;inset:0;width:100%;height:100%;display:block}
   .band article{flex:0 0 72%;scroll-snap-align:start}
 }
 
-/* Research */
+/* Projects */
 .proj{display:grid;grid-template-columns:240px 1fr;gap:48px;padding:40px 0;border-top:1px solid var(--line)}
 .proj:last-child{border-bottom:1px solid var(--line)}
 .status{display:inline-block;margin:0 0 20px;font-size:.85rem;font-weight:600;color:var(--accent);padding:2px 10px;border:1px solid var(--rose);border-radius:999px;background:color-mix(in srgb,var(--rose) 18%,transparent)}
@@ -156,7 +156,7 @@ canvas.air{position:absolute;inset:0;width:100%;height:100%;display:block}
 .group{margin:0 0 64px}
 .group-title{font-family:var(--serif);font-size:1.6rem;font-weight:500;color:var(--ink);margin:0 0 28px;padding-bottom:12px;border-bottom:2px solid var(--accent)}
 .people{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:36px 28px}
-  .person{background:none;border:0;padding:0;text-align:center;cursor:pointer;font:inherit;color:inherit;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;align-self:start}
+.person{background:none;border:0;padding:0;text-align:center;cursor:pointer;font:inherit;color:inherit;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;align-self:start}
 .person .photo{width:180px;height:180px;margin:0 auto;border-radius:50%;overflow:hidden;background:var(--tint);border:4px solid var(--surface);box-shadow:0 0 0 2px var(--rose)}
 .person img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
 .person:hover .photo,.person:focus-visible .photo{box-shadow:0 0 0 2px var(--blue)}
@@ -269,7 +269,7 @@ body{font-size:.97rem;line-height:1.65}
     <nav aria-label="Main">
       <ul>
         <li><a href="#/home" data-route="home">Home</a></li>
-        <li><a href="#/Research" data-route="Research">Research</a></li>
+        <li><a href="#/research" data-route="research">Research</a></li>
         <li><a href="#/people" data-route="people">People</a></li>
         <li><a href="#/contact" data-route="contact">Contact</a></li>
       </ul>
@@ -287,7 +287,7 @@ body{font-size:.97rem;line-height:1.65}
       <h1 id="site-name">Air and Climate Research Lab</h1>
       <p class="hero-lede" id="site-tagline">Facilitating a clearer picture of air pollution and climate management in Bangladesh.</p>
       <div class="hero-cta">
-        <a class="btn btn-light" href="#/Research">Explore Research</a>
+        <a class="btn btn-light" href="#/research">Explore research</a>
         <a class="btn btn-ghost" href="#/people">Meet the team</a>
       </div>
     </div>
@@ -317,17 +317,17 @@ body{font-size:.97rem;line-height:1.65}
   <section id="areas">
     <div class="wrap areas-head">
       <h2>Research areas</h2>
-      <p class="lede">Methods applied across Research to measure, model and explain air pollution in Bangladesh.</p>
+      <p class="lede">Methods applied across projects to measure, model and explain air pollution in Bangladesh.</p>
     </div>
     <div class="band" role="list" id="areas-band"></div>
   </section>
 </div>
 
-<!-- Research -->
-<div class="page" data-page="Research" hidden>
+<!-- PROJECTS -->
+<div class="page" data-page="research" hidden>
   <div class="page-head"><canvas class="air" aria-hidden="true"></canvas><div class="wrap ph-in">
     <h1>Research</h1>
-    <p>Current Research carried out by the lab and its partners.</p>
+    <p>Current research projects carried out by the lab and its partners.</p>
   </div></div>
   <section><div class="wrap" id="project-list"></div></section>
 </div>
@@ -396,7 +396,7 @@ body{font-size:.97rem;line-height:1.65}
       <h2 class="fh">Quick links</h2>
       <ul class="qlinks">
         <li><a href="#/home">Home</a></li>
-        <li><a href="#/Research">Research</a></li>
+        <li><a href="#/research">Research</a></li>
         <li><a href="#/people">People</a></li>
         <li><a href="#/contact">Contact</a></li>
         <li><a id="buet-quick" href="https://www.buet.ac.bd/" target="_blank" rel="noopener">BUET</a></li>
@@ -426,7 +426,7 @@ function contentMissing(file){ CONTENT_ERRORS.push(file + ": the file could not 
 <script src="content-news.js" onerror="contentMissing('content-news.js')"></script>
 <script src="content-events.js" onerror="contentMissing('content-events.js')"></script>
 <script src="content-research-areas.js" onerror="contentMissing('content-research-areas.js')"></script>
-<script src="content-research.js" onerror="contentMissing('content-research.js')"></script>
+<script src="content-projects.js" onerror="contentMissing('content-projects.js')"></script>
 <script src="content-people.js" onerror="contentMissing('content-people.js')"></script>
 <script>
 /* ============ CONTENT (from the content-*.js files) ============ */
@@ -434,7 +434,7 @@ const SITE = window.SITE || {};
 const NEWS = Array.isArray(window.NEWS) ? window.NEWS : [];
 const EVENTS = Array.isArray(window.EVENTS) ? window.EVENTS : [];
 const RESEARCH_AREAS = Array.isArray(window.RESEARCH_AREAS) ? window.RESEARCH_AREAS : [];
-const Research = Array.isArray(window.Research) ? window.Research : [];
+const PROJECTS = Array.isArray(window.PROJECTS) ? window.PROJECTS : [];
 const PEOPLE = Array.isArray(window.PEOPLE) ? window.PEOPLE : [];
 const GROUP_ORDER = Array.isArray(window.GROUP_ORDER) ? window.GROUP_ORDER : [];
 const EMBED_GOOGLE_MAP = SITE.showLiveMap === true;
@@ -489,8 +489,8 @@ $("event-list").innerHTML = EVENTS.map(e => {
   return `<li><div class="date" aria-hidden="true">${badge}</div><div><h3>${e.title}</h3><p>${e.date ? fmt(e.date) + ". " : ""}${e.text}</p></div></li>`;
 }).join("");
 
-/* Research */
-$("project-list").innerHTML = Research.map(p => {
+/* Projects */
+$("project-list").innerHTML = PROJECTS.map(p => {
   const meta = [["Partners", p.partners], ["Funded by", p.fundedBy], ["Project leads", p.leads]].filter(([, v]) => v);
   const site = p.websiteUrl ? `<dt>Project website</dt><dd><a class="site" href="${p.websiteUrl}" target="_blank" rel="noopener">${p.websiteLabel || p.websiteUrl}</a></dd>` : "";
   const scope = Array.isArray(p.scope) ? p.scope : [];
@@ -705,9 +705,10 @@ function draw(){
   if (!reduce) requestAnimationFrame(draw);
 }
 /* Tabs (hash routing) */
-const titles = { home: "", Research: "Research | ", people: "People | ", contact: "Contact | " };
+const titles = { home: "", research: "Research | ", people: "People | ", contact: "Contact | " };
 function route(){
   let r = location.hash.replace(/^#\/?/, "") || "home";
+  if (r === "projects") r = "research";          // old links to #/projects still work
   if (!titles.hasOwnProperty(r)) r = "home";
   document.querySelectorAll(".page").forEach(p => p.hidden = p.dataset.page !== r);
   document.querySelectorAll("nav a").forEach(a => a.dataset.route === r ? a.setAttribute("aria-current","page") : a.removeAttribute("aria-current"));
