@@ -8,7 +8,7 @@ The website is built from a few files. **You only ever need to edit the `content
 | `content-news.js` | News (home page, left box) |
 | `content-events.js` | Upcoming events (home page, right box) |
 | `content-research-areas.js` | The five coloured Research area cards (home page) |
-| `content-projects.js` | Projects page |
+| `content-research.js` | The projects listed on the **Research** page |
 | `content-people.js` | People page, the order of its sections, and the Lab directory on the Contact page |
 | `images/` | Logos, member photos and `placeholder.png` (shown when a member has no photo) |
 
@@ -127,8 +127,9 @@ Open the file → **History** → choose an earlier version → copy its content
 | To change… | Open… |
 |---|---|
 | The line under the lab name, footer About text, address, LinkedIn link | `content-site.js` |
+| Tab names, page headings, button labels (e.g. "Research", "Explore research") | `index.html` — the only text kept there; search for the words with Ctrl + F |
 | Add / edit news | `content-news.js` (newest date is shown first and larger) |
 | Add / edit events | `content-events.js` |
 | Research area cards | `content-research-areas.js` (always five; colours are fixed by position) |
-| Add / edit a project | `content-projects.js` |
+| Add / edit a project on the Research page | `content-research.js` |
 | Replace a logo | Upload a new file to `images` with exactly the same name (`acrl-logo.png` or `buet-logo.png`) |
