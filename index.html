@@ -35,19 +35,19 @@ section{padding:80px 0}
 /* Header (white so the logo sits cleanly) */
 header{position:sticky;top:0;z-index:20;background:#FFFFFF;border-bottom:3px solid #081A2D;padding-top:env(safe-area-inset-top,0px)}
 .bar{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;height:84px}
-nav{justify-self:end}
+header nav{justify-self:end}
 .buet{display:flex;align-items:center;gap:10px;padding-left:24px;border-left:1px solid #DDD0C8;text-decoration:none;line-height:0}
 .buet img{height:56px;width:56px}
 .brand{display:block;line-height:0}
 .brand img{height:54px;width:auto}
-nav ul{list-style:none;display:flex;gap:4px;margin:0;padding:0}
-nav a{display:block;padding:8px 14px;color:#1B2633;text-decoration:none;font-size:.95rem;font-weight:500;border-bottom:2px solid transparent}
-nav a:hover{color:#081A2D}
-nav a[aria-current="page"]{color:#081A2D;border-bottom-color:#5B0A1A}
+header nav ul{list-style:none;display:flex;gap:4px;margin:0;padding:0}
+header nav a{display:block;padding:8px 14px;color:#1B2633;text-decoration:none;font-size:.95rem;font-weight:500;border-bottom:2px solid transparent}
+header nav a:hover{color:#081A2D}
+header nav a[aria-current="page"]{color:#081A2D;border-bottom-color:#5B0A1A}
 @media (max-width:760px){
   .bar{height:auto;grid-template-columns:1fr auto;grid-template-areas:"brand buet" "nav nav";padding:10px 16px 0;gap:6px 16px}
   .brand{grid-area:brand}.buet{grid-area:buet;border:0;padding:0}.buet img{height:44px;width:44px}
-  nav{grid-area:nav;justify-self:start}.brand img{height:42px}nav a{padding:8px 10px;font-size:.9rem}nav ul{margin-left:-10px}
+  header nav{grid-area:nav;justify-self:start}.brand img{height:42px}header nav a{padding:8px 10px;font-size:.9rem}header nav ul{margin-left:-10px}
 }
 
 /* Pages */
@@ -237,7 +237,15 @@ footer .map{--tint:#0E2238; --line:#22374E; --surface:#0E2238; --ink:#F5F0EA; --
 .map-sm .open{padding:7px 12px;font-size:.85rem}
 .fbottom{margin-top:56px;padding:20px 24px;border-top:1px solid rgba(201,161,166,.25)}
 .fbottom small{color:#C9A1A6}
-@media (max-width:860px){.fcols{grid-template-columns:1fr;gap:40px}}
+@media (max-width:860px){.fcols{grid-template-columns:1fr;gap:36px}.fabout{max-width:none}}
+@media (max-width:560px){
+  footer{padding-top:48px}
+  footer .qlinks{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+  .qlinks li{margin:0 0 8px}
+  footer .follow{margin:8px 0 18px}
+  .map-sm{min-height:200px}
+  .fbottom{margin-top:40px}
+}
 
 /* Follow + LinkedIn icon */
 .follow{display:flex;align-items:center;gap:14px;font-weight:600}
