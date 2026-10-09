@@ -6,10 +6,11 @@
    ===================================================================== */
 
 window.GROUP_ORDER = [
-  "Director",
   "Principal Investigators",
-  "Resource Persons",
-  "Research Assistants"
+  "Advisors",
+  "Project Team",      // research assistants, project managers, administrative staff
+  "Research Fellows",  // PhD fellows, postdoctoral researchers
+  "Field Staff"
 ];
 
 /* =====================================================================
@@ -22,7 +23,7 @@ window.GROUP_ORDER = [
 
    TEMPLATE:
    {
-     group: "Principal Investigators",          // must match a name in GROUP_ORDER
+     group: "Project Team",                    // must match a name in GROUP_ORDER exactly
      name: "Dr. Full Name",
      role: "Principal Investigator",            // designation
      affiliation: "Department of Civil Engineering, BUET",
@@ -40,13 +41,13 @@ window.GROUP_ORDER = [
 window.PEOPLE = [
 
   {
-    group: "Research Assistants",
+    group: "Project Team",
     name: "Sayma Sultana Keya",
     role: "Research Assistant",
-    affiliation: "BUET",
+    affiliation: "Bangladesh University of Engineering and Technology (BUET)",
     email: "saymakeya21@gmail.com",
     photo: "keya.jpg",
-    bio: "Sayma Sultana Keya is a civil engineering graduate from Khulna University of Engineering & Technology (KUET). Her academic and research interests focus on environmental engineering and air quality. She is particularly interested in air pollution modeling, including land-use regression, geospatial validation, and the application of artificial intelligence and machine learning in environmental research. Currently, she is working as a Research Assistant on the project “Developing Tools to Improve Air Quality Management in Bangladesh,” where she contributes to air quality research and related environmental analysis. Through her research, she aims to contribute to greener, smarter, and more sustainable urban environments through practical and interdisciplinary approaches.",
+    bio: "Sayma Sultana Keya is a research assistant working in the project titled "Developing Tools to Improve Air Quality Management in Bangladesh", whereshe contributes to air quality research and related environmental analysis. She is a civil engineering graduate from Khulna University of Engineering & Technology (KUET). Her academic and research interests focus on environmental engineering and air quality. She is particularly interested in air pollution modeling, including land-use regression, geospatial validation, and the application of artificial intelligence and machine learning in environmental research. Through her research, she aims to contribute to greener, smarter, and more sustainable urban environments through practical and interdisciplinary approaches.",
     interests: ["Air quality", "Land-use regression", "Geospatial validation", "AI & machine learning"],
     links: [
       ["Phone", "tel:+8801771181149"],
@@ -57,7 +58,7 @@ window.PEOPLE = [
   },
 
   {
-    group: "Research Assistants",
+    group: "Project Team",
     name: "Mohsinat Ahmed Laboni",
     role: "Research Assistant",
     affiliation: "BUET",
