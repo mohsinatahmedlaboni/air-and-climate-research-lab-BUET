@@ -54,8 +54,8 @@ window.PEOPLE = [
     bio: `Dr. Sheikh Mokhlesur Rahman is the principal investigator of the HEAT project. He received his Bachelor’s and Master’s degrees in Civil Engineering from BUET, followed by a PhD in Environmental Engineering from Northeastern University. His PhD research focused on applying data mining and machine learning approaches to assess, characterize, and predict chemical toxicity from toxicogenomic data. Currently, he is serving as a Professor in the Department of Civil Engineering at BUET, specializing in Environmental Engineering.`,
     interests: ["Environmental data analysis", "Life cycle assessment", "Pollution management", "Sustainable Development"],
     links: [
-      ["ResearchGate", "https://www.researchgate.net/profile/Provat-Saha"],                    // CHECK: this is Dr. Provat Saha's link
-      ["Google Scholar", "https://scholar.google.com/citations?user=xCmoOTUAAAAJ&hl=en"]      // CHECK: same link as Dr. Provat Saha
+      ["ResearchGate", "https://www.researchgate.net/profile/Sheikh-Rahman-5"],                   
+      ["Google Scholar", "https://scholar.google.com/citations?user=rTprlQsAAAAJ&hl=en"]  
     ]
   },
 
@@ -84,8 +84,7 @@ window.PEOPLE = [
     bio: `Dr. Julian Marshall is the Co-Principal Investigator of the project ‘Developing Tools to Improve Air Quality Management in Bangladesh’. His research lies at the intersection of air quality engineering and public health, focusing on how much pollution people breathe and how to reduce those exposures. His work spans mechanistic and empirical modeling of how air pollution varies in space and time and responds to emission changes; exposure measurement and modeling in low-income countries; and exposure disparities across race and income.`,
     interests: ["Air quality engineering", "Exposure assessment", "Air pollution modeling", "Exposure disparities"],
     links: [
-      ["ResearchGate", "https://www.researchgate.net/profile/Provat-Saha"],                    // CHECK: this is Dr. Provat Saha's link
-      ["Google Scholar", "https://scholar.google.com/citations?user=xCmoOTUAAAAJ&hl=en"]      // CHECK: same link as Dr. Provat Saha
+      ["Google Scholar", "https://scholar.google.com/citations?user=41-6Uf4AAAAJ&hl=en"]     
     ]
   },
 
