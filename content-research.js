@@ -1,5 +1,5 @@
 /* =====================================================================
-   PROJECTS  (Projects page)
+   RESEARCH PROJECTS  (Research page)
    Shown in the order written here.
 
    TEMPLATE:
