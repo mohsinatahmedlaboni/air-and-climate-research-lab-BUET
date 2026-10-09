@@ -55,7 +55,8 @@ window.PEOPLE = [
     interests: ["Environmental data analysis", "Life cycle assessment", "Pollution management", "Sustainable Development"],
     links: [
       ["ResearchGate", "https://www.researchgate.net/profile/Sheikh-Rahman-5"],                   
-      ["Google Scholar", "https://scholar.google.com/citations?user=rTprlQsAAAAJ&hl=en"]  
+      ["Google Scholar", "https://scholar.google.com/citations?user=rTprlQsAAAAJ&hl=en"],
+      ["LinkedIn", "https://bd.linkedin.com/in/mokhles-sh"]
     ]
   },
 
@@ -84,7 +85,8 @@ window.PEOPLE = [
     bio: `Dr. Julian Marshall is the Co-Principal Investigator of the project ‘Developing Tools to Improve Air Quality Management in Bangladesh’. His research lies at the intersection of air quality engineering and public health, focusing on how much pollution people breathe and how to reduce those exposures. His work spans mechanistic and empirical modeling of how air pollution varies in space and time and responds to emission changes; exposure measurement and modeling in low-income countries; and exposure disparities across race and income.`,
     interests: ["Air quality engineering", "Exposure assessment", "Air pollution modeling", "Exposure disparities"],
     links: [
-      ["Google Scholar", "https://scholar.google.com/citations?user=41-6Uf4AAAAJ&hl=en"]     
+      ["Google Scholar", "https://scholar.google.com/citations?user=41-6Uf4AAAAJ&hl=en"],
+      ["LinkedIn", "https://www.linkedin.com/in/julian-marshall-59687710/"]
     ]
   },
 
@@ -120,5 +122,23 @@ window.PEOPLE = [
       ["Google Scholar", "https://scholar.google.com/citations?user=O_qegIwAAAAJ"]
     ]
   }
+
+  {
+    group: "Advisors",
+    name: "Alper Ünal, Ph.D.",
+    role: "Advisor",
+    affiliation: "Istanbul Technical University",
+    email: "aunal@itu.edu.tr",
+    photo: "alper-unal.jpg",
+    bio: `Dr. Alper Unal is serving as one of the advisors in the project titled 'Developing Tools to Improve Air Quality Management in Bangladesh', where he is one of the experts involved in developing the national-scale emission inventory for Bangladesh alongside with chemical transport modeling utilizing WRF-Chem and CMAQ. He is a professor at Eurasia Institute of Earth Sciences in Istanbul Technical University.`,
+    interests: ["Contaminant dynamics", "Chemical transport modeling", "Emission inventories", "Predictive analysis"],
+    links: [
+      ["Website", "https://research.itu.edu.tr/en/persons/alper-%C3%BCnal/"],
+      ["ResearchGate", "https://www.researchgate.net/profile/Alper-Unal-2"],
+      ["LinkedIn", "https://www.linkedin.com/in/alper-unal-953b271/"],
+      ["Google Scholar", "https://scholar.google.com/citations?user=lhK5pdUAAAAJ&hl=en"]
+    ]
+  }
+
 
 ];
