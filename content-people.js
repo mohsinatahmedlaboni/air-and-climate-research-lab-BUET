@@ -91,6 +91,22 @@ window.PEOPLE = [
   },
 
   {
+    group: "Advisors",
+    name: "Alper Ünal, Ph.D.",
+    role: "Advisor",
+    affiliation: "Istanbul Technical University",
+    email: "aunal@itu.edu.tr",
+    photo: "alper-unal.jpg",
+    bio: `Dr. Alper Ünal is an advisor to the project 'Developing Tools to Improve Air Quality Management in Bangladesh', where he is one of the experts developing the national-scale emission inventory for Bangladesh, alongside chemical transport modeling using WRF-Chem and CMAQ. He is a professor at the Eurasia Institute of Earth Sciences, Istanbul Technical University.`,    interests: ["Emission inventories", "Chemical transport modeling", "WRF-Chem", "CMAQ", "Air quality management"],
+    links: [
+      ["Website", "https://research.itu.edu.tr/en/persons/alper-%C3%BCnal/"],
+      ["ResearchGate", "https://www.researchgate.net/profile/Alper-Unal-2"],
+      ["LinkedIn", "https://www.linkedin.com/in/alper-unal-953b271/"],
+      ["Google Scholar", "https://scholar.google.com/citations?user=lhK5pdUAAAAJ&hl=en"]
+    ]
+  },
+
+  {
     group: "Project Team",
     name: "Sayma Sultana Keya",
     role: "Research Assistant",
@@ -121,22 +137,9 @@ window.PEOPLE = [
       ["LinkedIn", "https://www.linkedin.com/in/mohsinat-ahmed-laboni"],
       ["Google Scholar", "https://scholar.google.com/citations?user=O_qegIwAAAAJ"]
     ]
-  },
+  }
 
-  {
-    group: "Advisors",
-    name: "Alper Ünal, Ph.D.",
-    role: "Advisor",
-    affiliation: "Istanbul Technical University",
-    email: "aunal@itu.edu.tr",
-    photo: "alper-unal.jpg",
-    bio: `Dr. Alper Ünal is an advisor to the project 'Developing Tools to Improve Air Quality Management in Bangladesh', where he is one of the experts developing the national-scale emission inventory for Bangladesh, alongside chemical transport modeling using WRF-Chem and CMAQ. He is a professor at the Eurasia Institute of Earth Sciences, Istanbul Technical University.`,    interests: ["Emission inventories", "Chemical transport modeling", "WRF-Chem", "CMAQ", "Air quality management"],
-    links: [
-      ["Website", "https://research.itu.edu.tr/en/persons/alper-%C3%BCnal/"],
-      ["ResearchGate", "https://www.researchgate.net/profile/Alper-Unal-2"],
-      ["LinkedIn", "https://www.linkedin.com/in/alper-unal-953b271/"],
-      ["Google Scholar", "https://scholar.google.com/citations?user=lhK5pdUAAAAJ&hl=en"]
-    ]
+   
   }
 
 
