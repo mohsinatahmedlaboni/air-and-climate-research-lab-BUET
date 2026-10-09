@@ -50,7 +50,6 @@ window.PEOPLE = [
     bio: "Sayma Sultana Keya is a research assistant working in the project titled "Developing Tools to Improve Air Quality Management in Bangladesh", whereshe contributes to air quality research and related environmental analysis. She is a civil engineering graduate from Khulna University of Engineering & Technology (KUET). Her academic and research interests focus on environmental engineering and air quality. She is particularly interested in air pollution modeling, including land-use regression, geospatial validation, and the application of artificial intelligence and machine learning in environmental research. Through her research, she aims to contribute to greener, smarter, and more sustainable urban environments through practical and interdisciplinary approaches.",
     interests: ["Air quality", "Land-use regression", "Geospatial validation", "AI & machine learning"],
     links: [
-      ["Phone", "tel:+8801771181149"],
       ["LinkedIn", "https://www.linkedin.com/in/sayma-sultana-keya-39b301208/"],
       ["ResearchGate", "https://www.researchgate.net/profile/Sayma-Keya"],
       ["Google Scholar", "https://scholar.google.com/citations?user=HuOMarkAAAAJ&hl=en"]
@@ -61,10 +60,10 @@ window.PEOPLE = [
     group: "Project Team",
     name: "Mohsinat Ahmed Laboni",
     role: "Research Assistant",
-    affiliation: "BUET",
+    affiliation: "Bangladesh University of Engineering and Technology (BUET)",
     email: "mohsinat.ahmed@gmail.com",
     photo: "laboni.jpg",
-    bio: "Mohsinat Ahmed Laboni earned her B.Sc. in Civil Engineering, specializing in Environmental Engineering. Currently a Research Assistant for the project “Developing Tools to Improve Air Quality Management in Bangladesh,” her primary research areas encompass environmental contaminant dynamics in water and air systems, chemical transport modeling, emission inventories, and data-driven predictive analysis.",
+    bio: "Mohsinat Ahmed Laboni is a research assistant working in the project titled "Developing Tools to Improve Air Quality Management in Bangladesh", where she's working towards building a national-scale emission inventory and developing Intervention Model for Air Pollution (InMAP) for Bangladesh. She earned her B.Sc. in Civil Engineering, specializing in Environmental Engineering. Her primary research areas encompass environmental contaminant dynamics in water and air systems, chemical transport modeling, emission inventories, and data-driven predictive analysis.",
     interests: ["Contaminant dynamics", "Chemical transport modeling", "Emission inventories", "Predictive analysis"],
     links: [
       ["Website", "https://mohsinatahmedlaboni.github.io"],
