@@ -131,7 +131,7 @@ window.PEOPLE = [
     email: "aunal@itu.edu.tr",
     photo: "alper-unal.jpg",
     bio: `Dr. Alper Unal is serving as one of the advisors in the project titled 'Developing Tools to Improve Air Quality Management in Bangladesh', where he is one of the experts involved in developing the national-scale emission inventory for Bangladesh alongside with chemical transport modeling utilizing WRF-Chem and CMAQ. He is a professor at Eurasia Institute of Earth Sciences in Istanbul Technical University.`,
-    interests: ["Contaminant dynamics", "Chemical transport modeling", "Emission inventories", "Predictive analysis"],
+    interests: ["Emission inventories", "Chemical transport modeling", "WRF-Chem", "CMAQ", "Air quality management"],
     links: [
       ["Website", "https://research.itu.edu.tr/en/persons/alper-%C3%BCnal/"],
       ["ResearchGate", "https://www.researchgate.net/profile/Alper-Unal-2"],
