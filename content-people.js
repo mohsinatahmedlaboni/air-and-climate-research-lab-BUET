@@ -29,8 +29,8 @@ window.GROUP_ORDER = [
      affiliation: "Department of Civil Engineering, BUET",
      email: "name@example.com",
      photo: "filename.jpg",                     // file inside the images folder
-     bio: "Short biography in the third person.",
-     interests: ["Topic one", "Topic two"],     // shown as tags in the profile
+     bio: "Short biography in the third person." // Try to keep it within 80 words
+     interests: ["Topic one", "Topic two"],     // maximum 5. Shown as tags in the profile
      links: [                                   // any number of links, or [] for none
        ["Google Scholar", "https://scholar.google.com/..."],
        ["LinkedIn", "https://www.linkedin.com/in/..."]
@@ -47,7 +47,7 @@ window.PEOPLE = [
     affiliation: "Bangladesh University of Engineering and Technology (BUET)",
     email: "saymakeya21@gmail.com",
     photo: "keya.jpg",
-    bio: "Sayma Sultana Keya is a research assistant working under the project titled 'Developing Tools to Improve Air Quality Management in Bangladesh', where she contributes to air quality research and related environmental analysis. She is a civil engineering graduate from Khulna University of Engineering & Technology (KUET). Her academic and research interests focus on environmental engineering and air quality. She is particularly interested in air pollution modeling, including land-use regression, geospatial validation, and the application of artificial intelligence and machine learning in environmental research. Through her research, she aims to contribute to greener, smarter, and more sustainable urban environments through practical and interdisciplinary approaches.",
+    bio: "Sayma Sultana Keya is a Research Assistant on the project ‘Developing Tools to Improve Air Quality Management in Bangladesh’, contributing to air quality research and related environmental analysis. A civil engineering graduate of Khulna University of Engineering & Technology (KUET), she focuses on environmental engineering and air quality, particularly air pollution modeling, including land-use regression, geospatial validation, and applications of artificial intelligence and machine learning. She aims to support greener, smarter and more sustainable urban environments through practical, interdisciplinary research.",
     interests: ["Air quality", "Land-use regression", "Geospatial validation", "AI & machine learning"],
     links: [
       ["LinkedIn", "https://www.linkedin.com/in/sayma-sultana-keya-39b301208/"],
@@ -72,5 +72,52 @@ window.PEOPLE = [
       ["Google Scholar", "https://scholar.google.com/citations?user=O_qegIwAAAAJ"]
     ]
   }
+   
+  {
+    group: "Principal Investigators",
+    name: "Sheikh Mokhlesur Rahman, Ph.D.",
+    role: "Principal Investigator",
+    affiliation: "Bangladesh University of Engineering and Technology (BUET)",
+    email: "smrahman@ce.buet.ac.bd",
+    photo: "provat-saha.jpg",
+    bio: "Dr. Sheikh Mokhlesur Rahman is the principal investigator of the HEAT project. He received his Bachelor’s and Master’s degrees in Civil Engineering from BUET, followed by a PhD in Environmental Engineering from Northeastern University. His PhD research focused on applying data mining and machine learning approaches to assess, characterize, and predict chemical toxicity from toxicogenomic data. Currently, he is serving as a Professor in the Department of Civil Engineering at BUET, specializing in Environmental Engineering.",
+    interests: ["Environmental data analysis", "Life cycle assessment", "Pollution management", "Sustainable Development"],
+    links: [
+      ["ResearchGate", "https://www.researchgate.net/profile/Provat-Saha"],
+      ["Google Scholar", "https://scholar.google.com/citations?user=xCmoOTUAAAAJ&hl=en"]
+    ]
+  }
+   
+   
+  {
+    group: "Principal Investigators",
+    name: "Provat Kumar Saha, Ph.D.",
+    role: "Principal Investigator",
+    affiliation: "University of Washington (UW)",
+    email: "psaha3@uw.edu",
+    photo: "provat-saha.jpg",
+    bio: "Dr. Provat Kumar Saha is the principal investigator of the project titled 'Developing Tools to Improve Air Quality Management in Bangladesh'. He is currently serving as the adjuncy assistant professor at the University of Washington, and is a part of Marshall Research Group. His primary research areas use of models and measurements to help reduce air pollution in Bangladesh.",
+    interests: ["Air quality", "Low-cost sensors", "Particulate matter", "Chemical speciation", "Emission inventory"],
+    links: [
+      ["ResearchGate", "https://www.researchgate.net/profile/Provat-Saha"],
+      ["Google Scholar", "https://scholar.google.com/citations?user=xCmoOTUAAAAJ&hl=en"]
+    ]
+  }
 
+ {
+    group: "Principal Investigators",
+    name: "Julian Marshall, Ph.D.",
+    role: "Principal Investigator",
+    affiliation: "University of Washington (UW)",
+    email: "jdmarsh@uw.edu",
+    photo: "julian-marshall.jpg",
+    bio: "Dr. Julian Marshall is the Co-Principal Investigator of the project ‘Developing Tools to Improve Air Quality Management in Bangladesh’. His research lies at the intersection of air quality engineering and public health, focusing on how much pollution people breathe and how to reduce those exposures. His work spans mechanistic and empirical modeling of how air pollution varies in space and time and responds to emission changes; exposure measurement and modeling in low-income countries; and exposure disparities across race and income.",
+    interests: ["Environmental data analysis", "Life cycle assessment", "Pollution management", "Sustainable Development"],
+    links: [
+      ["ResearchGate", "https://www.researchgate.net/profile/Provat-Saha"],
+      ["Google Scholar", "https://scholar.google.com/citations?user=xCmoOTUAAAAJ&hl=en"]
+    ]
+  }
+
+   
 ];
