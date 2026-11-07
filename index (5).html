@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Air and Climate Research Lab, BUET</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:110px;color-scheme:light}
+body{margin:0;background:#F7F6F2;color:#1B2433;font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:#1F5A8C;transition:color .2s ease}a:hover{color:#123E63}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #1F5A8C;outline-offset:3px;border-radius:2px}
+.page[hidden]{display:none}
+.crumbs{margin:0 0 18px;font-size:15px;color:#A9C4DE}.crumbs a{color:#A9C4DE;text-decoration:none}.crumbs a:hover{color:#FFFFFF;text-decoration:underline}
+
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:40;background:#FFFFFF;border-bottom:1px solid #E3E1DA}
+.util{border-bottom:1px solid #EFEDE7}
+.util .wrap{display:flex;justify-content:flex-end;align-items:center;gap:14px;padding:4px 24px;font-size:14px}
+.util a{display:inline-flex;align-items:center;gap:6px;color:#3A4556;text-decoration:none;min-height:32px}
+.util a:hover{color:#0A66C2}
+.wrap{max-width:1200px;margin:0 auto}
+.bar{display:flex;align-items:center;gap:20px;padding:10px 24px}
+.brand img{height:52px;width:auto;display:block}
+.buet{height:44px;width:44px;padding-left:18px;border-left:1px solid #E3E1DA;box-sizing:content-box}
+.nav{margin-left:auto;font-family:Poppins,'Segoe UI',sans-serif;font-size:15px;font-weight:500}
+.nav>ul{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:2px}
+.nav li{position:relative}
+.nav .top{display:flex;align-items:center}
+.nav .top>a{display:block;padding:12px 10px;color:#3A4556;text-decoration:none;border-bottom:2px solid transparent}
+.nav .top>a:hover{color:#0B1A2C}
+.nav li.active>.top>a{color:#0B1A2C;border-bottom-color:#7A1424}
+.sub-toggle{background:none;border:0;padding:6px 4px;margin-left:-6px;color:#5A6473;cursor:pointer;display:inline-flex;min-height:32px;align-items:center}
+.sub-toggle svg{transition:transform .2s}
+.sub{list-style:none;margin:0;padding:8px;position:absolute;top:100%;left:0;min-width:240px;background:#FFFFFF;border:1px solid #E3E1DA;border-top:3px solid #7A1424;border-radius:0 0 4px 4px;box-shadow:0 14px 30px -12px rgba(11,26,44,.3);opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s,transform .18s,visibility .18s}
+.sub a{display:block;padding:9px 12px;color:#1B2433;text-decoration:none;border-radius:3px;font-weight:500}
+.sub a:hover,.sub a.cur{background:#F1F4F7;color:#0B1A2C}
+.sub .indent a{padding-left:26px;font-size:14px;color:#3A4556;font-weight:400}
+@media (hover:hover) and (min-width:1101px){.nav li:hover>.sub{opacity:1;visibility:visible;transform:none}}
+@media (min-width:1101px){.nav li.open>.sub,.nav li:focus-within>.sub{opacity:1;visibility:visible;transform:none}}
+.menu-btn{display:none;margin-left:auto;align-items:center;gap:8px;font:600 15px Poppins,'Segoe UI',sans-serif;color:#FFFFFF;background:#0B1A2C;border:1px solid #0B1A2C;border-radius:4px;padding:8px 14px;min-height:44px;cursor:pointer}
+@media (max-width:1100px){
+  .bar{flex-wrap:wrap}
+  .menu-btn{display:inline-flex}
+  .buet{order:2;padding-left:14px}
+  .nav{order:3;flex:0 0 100%;margin:0;display:none;border-top:1px solid #E3E1DA;padding:6px 0 10px}
+  .nav.open{display:block}
+  .nav>ul{flex-direction:column;align-items:stretch;gap:0}
+  .nav .top{justify-content:space-between;border-bottom:1px solid #EFEDE7}
+  .nav .top>a{padding:14px 4px;border-bottom:0;flex:1}
+  .nav li.active>.top>a{border-bottom:0;color:#7A1424}
+  .sub-toggle{min-width:44px;min-height:44px;justify-content:center;margin:0}
+  .sub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;border-radius:0;padding:4px 0 8px 12px;display:none;min-width:0}
+  .nav li.open>.sub{display:block}
+  .nav li.open>.top .sub-toggle svg{transform:rotate(180deg)}
+}
+@media (max-width:560px){.brand img{height:42px}.buet{height:36px;width:36px}}
+
+/* ---------- page hero entrance ---------- */
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.page>section:first-child>div>*,.page>section:first-child>div>div:first-child>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.page>section:first-child>div>*:nth-child(2),.page>section:first-child>div>div:first-child>*:nth-child(2){animation-delay:.15s}
+.page>section:first-child>div>*:nth-child(3),.page>section:first-child>div>div:first-child>*:nth-child(3){animation-delay:.3s}
+.page>section:first-child>div>*:nth-child(4),.page>section:first-child>div>div:first-child>*:nth-child(4){animation-delay:.45s}
+@keyframes reveal{from{opacity:0;translate:0 28px}to{opacity:1;translate:0 0}}
+@supports (animation-timeline: view()){.page>section~section,.page main>section,.page main>article{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% entry 45%}}
+
+/* ---------- carried over from the design ---------- */
+.band{display:flex;height:340px;border-radius:4px;overflow:hidden}
+.band article{flex:1 1 0;min-width:0;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;transition:flex-grow .5s cubic-bezier(.2,.7,.2,1);outline-offset:-4px}
+.band .word{position:absolute;left:24px;top:22px;font-family:Poppins,'Segoe UI',sans-serif;font-weight:600;font-size:30px;line-height:1;opacity:.35;white-space:nowrap;transition:opacity .5s}
+.band .desc{margin:0;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s,opacity .4s,margin .5s}
+.band article:hover,.band article:focus-visible{flex-grow:2.3}
+.band article:hover .desc,.band article:focus-visible .desc{max-height:10em;opacity:1;margin-top:10px}
+.band article:hover .word,.band article:focus-visible .word{opacity:.6}
+@media (hover:none),(max-width:760px){.band{overflow-x:auto;scroll-snap-type:x mandatory}.band article{flex:0 0 72%;scroll-snap-align:start}.band .desc{max-height:none;opacity:1;margin-top:10px}}
+.ph>div,.ph>img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.proj:hover .ph>div,.proj:hover .ph>img{transform:scale(1.045)}
+a svg{transition:transform .2s ease}a:hover svg{transform:translate(2px,0)}
+a[style*="padding"][style*="border-radius: 4px"]{transition:transform .2s ease,box-shadow .2s ease}
+a[style*="padding"][style*="border-radius: 4px"]:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(11,26,44,.18)}
+
+/* ---------- How we work ---------- */
+.hww{margin:0 0 72px}
+.hww-head{margin-bottom:36px}
+.hww-steps{list-style:none;margin:0;padding:0;position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.hww-line{position:absolute;left:12%;right:12%;top:36px;height:2px;background:linear-gradient(90deg,#2E6596,#7A1424);transform-origin:left;transform:scaleX(0);transition:transform 1.4s cubic-bezier(.2,.7,.2,1) .2s}
+.hww-step{position:relative;text-align:center;padding:0 8px;opacity:0;transform:translateY(22px);transition:opacity .7s ease calc(.25s + var(--i)*.18s),transform .7s cubic-bezier(.2,.7,.2,1) calc(.25s + var(--i)*.18s)}
+.hww-icon{position:relative;z-index:1;width:72px;height:72px;margin:0 auto 18px;border-radius:50%;background:#FFFFFF;border:2px solid #D6DEE8;color:#1F4E7A;display:flex;align-items:center;justify-content:center;transform:scale(.6);transition:transform .6s cubic-bezier(.3,1.6,.5,1) calc(.35s + var(--i)*.18s),background .3s,color .3s,border-color .3s}
+.hww-step:hover .hww-icon{background:#0B1A2C;color:#FFFFFF;border-color:#0B1A2C}
+.hww-num{display:block;font:600 13px Poppins,'Segoe UI',sans-serif;letter-spacing:.12em;color:#7A1424;margin-bottom:4px}
+.hww-step h3{margin:0 0 8px;font:600 20px/1.3 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.hww-step p{margin:0;font-size:16px;color:#3A4556}
+.hww.in .hww-line{transform:scaleX(1)}
+.hww.in .hww-step{opacity:1;transform:none}
+.hww.in .hww-icon{transform:scale(1)}
+@media (max-width:860px){
+  .hww-steps{grid-template-columns:1fr;gap:28px}
+  .hww-line{left:35px;right:auto;top:36px;bottom:36px;width:2px;height:auto;transform-origin:top;transform:scaleY(0);background:linear-gradient(180deg,#2E6596,#7A1424)}
+  .hww.in .hww-line{transform:scaleY(1)}
+  .hww-step{display:grid;grid-template-columns:72px 1fr;column-gap:20px;text-align:left;padding:0}
+  .hww-icon{grid-row:1/4;margin:0}
+}
+
+/* ---------- Research areas ---------- */
+.areas2{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin-bottom:72px}
+.area2{grid-column:span 2;background:#FFFFFF;border:1px solid #E3E1DA;border-radius:4px;overflow:hidden;display:flex;flex-direction:column;opacity:0;transform:translateY(24px);transition:opacity .7s ease calc(var(--i)*.12s),transform .7s cubic-bezier(.2,.7,.2,1) calc(var(--i)*.12s),box-shadow .25s}
+.area2:nth-child(4),.area2:nth-child(5){grid-column:span 3}
+.area2-top{background:var(--c);color:#FFFFFF;padding:22px 24px;display:flex;justify-content:space-between;align-items:flex-start;min-height:118px;position:relative;overflow:hidden}
+.area2-top::after{content:"";position:absolute;right:-30px;bottom:-60px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.08);transition:transform .5s}
+.area2-num{font:600 44px/1 Poppins,'Segoe UI',sans-serif;opacity:.55}
+.area2 h3{margin:20px 24px 8px;font:600 21px/1.3 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.area2 p{margin:0 24px 24px;font-size:16px;color:#3A4556}
+.area2:hover{box-shadow:0 14px 30px -14px rgba(11,26,44,.35)}
+.area2:hover .area2-top::after{transform:scale(1.25)}
+.areas2.in .area2{opacity:1;transform:none}
+@media (max-width:900px){.areas2{grid-template-columns:repeat(2,minmax(0,1fr))}.area2,.area2:nth-child(4),.area2:nth-child(5){grid-column:span 1}.area2:nth-child(5){grid-column:span 2}}
+@media (max-width:560px){.areas2{grid-template-columns:1fr}.area2:nth-child(5){grid-column:span 1}}
+.proj-teaser{display:flex;flex-wrap:wrap;align-items:center;gap:20px 40px;background:#FFFFFF;border:1px solid #E3E1DA;border-left:4px solid #7A1424;border-radius:4px;padding:32px}
+.proj-teaser>div{flex:1 1 260px}
+.proj-teaser ul{flex:2 1 420px;list-style:none;margin:0;padding:0}
+.proj-teaser li a{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #ECE9E2;font-weight:600;text-decoration:none;color:#0B1A2C}
+.proj-teaser li a:hover{color:#1F5A8C}
+.btn-navy{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;background:#0B1A2C;color:#FFFFFF!important;text-decoration:none;font-weight:600;border-radius:4px}
+.btn-navy:hover{background:#1F4E7A}
+
+/* ---------- shared bits ---------- */
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;margin-bottom:24px}
+.sec-head h2{margin:0;font:600 30px/1.2 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.sec-head a{font-weight:600;display:inline-flex;gap:6px;align-items:center}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:999px;background:#E3ECF5;color:#123E63}
+.tag.opp{background:#F6E4E7;color:#6B1322}.tag.ev{background:#FBEFD9;color:#5B3A00}.tag.open{background:#7A1424;color:#FFFFFF}.tag.closed{background:#ECEAE4;color:#5A6473}
+.box{background:#FFFFFF;border:1px solid #E6DCD4;border-top:4px solid #7A1424;border-radius:4px;padding:36px 40px;box-shadow:0 18px 40px -28px rgba(11,26,44,.35)}
+@media (max-width:640px){.box{padding:26px 20px}}
+.reveal-group .reveal-item{opacity:0;transform:translateY(18px);transition:opacity .6s ease calc(var(--i,0)*.08s),transform .6s cubic-bezier(.2,.7,.2,1) calc(var(--i,0)*.08s)}
+.reveal-group.in .reveal-item{opacity:1;transform:none}
+
+/* ---------- people ---------- */
+.ppl-wrap{max-width:1200px;margin:0 auto;padding:64px 24px 88px}
+.ppl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:40px 28px;align-items:start}
+.pcard{font:inherit;color:inherit;background:none;border:0;padding:8px 4px;cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;border-radius:6px;transition:background .2s}
+.pcard:hover{background:#FFFFFF}
+.avatar{width:168px;height:168px;border-radius:50%;object-fit:cover;object-position:center 22%;border:4px solid #FFFFFF;box-shadow:0 0 0 2px #C9A1A6;margin-bottom:14px;display:flex;align-items:center;justify-content:center;background:#E9EEF3;font:600 38px Poppins,'Segoe UI',sans-serif;color:#5A6473;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.pcard:hover .avatar{transform:scale(1.04);box-shadow:0 0 0 2px #7A1424}
+.pcard .nm{font:600 18px/1.3 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.pcard .rl{font-size:15px;font-weight:600;color:#7A1424}
+.pcard .af{font-size:14px;line-height:1.4;color:#5A6473}
+.grp{margin-bottom:56px}
+.grp h2{margin:0 0 28px;padding-bottom:12px;border-bottom:2px solid #7A1424;font:600 26px/1.2 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.grp .note{margin:-16px 0 24px;color:#5A6473;font-size:16px}
+.lead{display:flex;flex-wrap:wrap;gap:28px 48px;align-items:center;background:#FFFFFF;border:1px solid #E3E1DA;border-radius:4px;padding:36px;margin-bottom:56px}
+.lead img{width:200px;height:200px;border-radius:50%;object-fit:cover;object-position:center 22%;border:4px solid #FFFFFF;box-shadow:0 0 0 2px #C9A1A6}
+.lead>div{flex:1 1 360px}
+.lead .eyebrow{margin:0 0 6px;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#7A1424}
+.lead h2{margin:0 0 4px;font:600 30px/1.2 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.sub-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.sub-card{display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border:1px solid #E3E1DA;border-radius:4px;padding:24px;text-decoration:none;color:#1B2433;transition:transform .25s,box-shadow .25s,border-color .25s}
+.sub-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px -14px rgba(11,26,44,.35);border-color:#C9C5BA;color:#1B2433}
+.sub-card h3{margin:0;font:600 22px Poppins,'Segoe UI',sans-serif;color:#0B1A2C;display:flex;justify-content:space-between;align-items:center}
+.sub-card .cnt{font-size:14px;color:#5A6473}
+.stack{display:flex}
+.stack span{width:40px;height:40px;border-radius:50%;border:2px solid #FFFFFF;margin-right:-10px;background:#E9EEF3 center 22%/cover;display:flex;align-items:center;justify-content:center;font:600 13px Poppins,sans-serif;color:#5A6473}
+dialog.profile{border:0;padding:0;background:#FFFFFF;color:#1B2433;color-scheme:light;width:min(880px,calc(100vw - 32px));max-height:calc(100vh - 48px);border-radius:4px;color:#1B2433}
+dialog.profile::backdrop{background:rgba(11,26,44,.6)}
+.prof{display:flex;flex-wrap:wrap;position:relative}
+.prof-ph{flex:1 1 260px;min-height:280px;background:#E9EEF3 center 20%/cover no-repeat;display:flex;align-items:center;justify-content:center;font:600 56px Poppins,sans-serif;color:#5A6473}
+.prof-bd{flex:1.6 1 360px;min-width:0;padding:36px 40px;background:#FFFFFF;color:#1B2433}
+.prof-bd h2{margin:0 48px 4px 0;font:600 28px/1.2 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.prof-bd .r{margin:0 0 18px;color:#5A6473}
+.prof-tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.prof-tags span{font-size:13px;font-weight:600;color:#6B1322;background:#F6E4E7;padding:3px 10px;border-radius:999px}
+.prof-links{display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:18px;border-top:1px solid #E3E1DA;font-size:16px;font-weight:600}
+.x{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:1px solid #E3E1DA;background:#FFFFFF;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#0B1A2C}
+
+/* ---------- news & events ---------- */
+.ne-wrap{max-width:1200px;margin:0 auto;padding:64px 24px 88px}
+.ne-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:28px;align-items:stretch}
+.ne-cols h2,.box>h2{margin:0 0 4px;font:600 30px/1.15 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.box .lede{margin:0 0 4px;padding-bottom:16px;border-bottom:2px solid #1F4E79;font-size:15px;color:#5A6473}
+.nitem{display:flex;flex-wrap:wrap;gap:14px 20px;padding:22px 0;border-bottom:1px solid #E6DCD4}
+.nitem .thumb{flex:0 0 150px;height:110px;border-radius:4px;background:#E9EEF3 center/cover}
+.nitem .thumb.top{background-position:top}
+.nitem>div{flex:1 1 260px;min-width:0}
+.nitem .m{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px;font-size:14px;color:#5A6473}
+.nitem h3{margin:0 0 6px;font:600 20px/1.35 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.nitem p{margin:0 0 8px;font-size:16px;color:#3A4556}
+.nitem a{font-size:15px;font-weight:600}
+.nitem.feature .thumb{flex:1 1 100%;height:260px}
+.nitem.feature h3{font-size:26px}
+.ev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.evc{display:flex;gap:18px;background:#FFFFFF;border:1px solid #E3E1DA;border-radius:4px;padding:22px}
+.badge{flex:0 0 66px;text-align:center;background:#0B1A2C;color:#FFFFFF;line-height:1.1;border-radius:3px;overflow:hidden;align-self:flex-start}
+.badge .mo{display:block;background:#5B0A1A;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 0}
+.badge .dy{display:block;font:600 26px Poppins,sans-serif;padding:6px 0}
+.evc h3{margin:4px 0 4px;font:600 19px/1.3 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.evc p{margin:0 0 6px;font-size:15px;color:#5A6473}
+.past{list-style:none;margin:0;padding:0;border-top:1px solid #D6D3CA}
+.past li{display:flex;flex-wrap:wrap;gap:6px 24px;padding:18px 0;border-bottom:1px solid #D6D3CA}
+.past .d{flex:0 0 160px;color:#5A6473;font-size:15px}
+.past .t{flex:1 1 360px}.past .t strong{display:block;color:#0B1A2C}.past .t span{font-size:15px;color:#3A4556}
+.mini{list-style:none;margin:0;padding:0}
+.mini li{padding:16px 0;border-bottom:1px solid #E6DCD4}
+.mini .m{font-size:14px;color:#5A6473;display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:4px}
+.mini strong{display:block;font:600 17px/1.35 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.more{display:inline-flex;gap:6px;align-items:center;margin-top:18px;font-weight:600}
+
+/* ---------- network ---------- */
+.net-about{display:flex;flex-wrap:wrap;gap:32px 56px;margin-bottom:72px}
+.net-about>div{flex:1.3 1 420px}
+.net-pillars{flex:1 1 320px;list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.net-pillars li{background:#FFFFFF;border:1px solid #E3E1DA;border-left:4px solid #1F4E7A;border-radius:4px;padding:16px 20px}
+.net-pillars strong{display:block;font-family:Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.net-pillars span{font-size:16px;color:#3A4556}
+.post-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.post{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.post-img{width:100%;height:190px;border-radius:4px;background:#E9EEF3;margin-bottom:6px}
+.post h3{margin:0;font:600 20px/1.3 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.post .meta{margin:0;font-size:14px;color:#5A6473}.post p{margin:0;font-size:16px;color:#3A4556}
+.post a{font-weight:600;display:inline-flex;gap:6px;align-items:center}
+.res-list{list-style:none;margin:0;padding:0;border-top:1px solid #D6D3CA}
+.res-list li{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid #D6D3CA}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.hww-step,.hww-icon,.area2,.reveal-group .reveal-item{opacity:1!important;transform:none!important}.hww-line{transform:none!important}}
+
+.menu-btn:hover{background:#1F4E7A;border-color:#1F4E7A}
+.menu-btn[aria-expanded="true"]{background:#1F4E7A}
+/* LinkedIn row under the home hero */
+.li-row{max-width:1200px;margin:0 auto;padding:18px 24px 0;display:flex;justify-content:flex-end}
+.li-row a{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:#0A66C2;text-decoration:none;min-height:44px}
+.li-row a:hover{color:#004182}
+/* small lift on the "What we work on" cards */
+.areas>div{transition:transform .25s ease,box-shadow .25s ease}
+.areas>div:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(11,26,44,.14)}
+/* open calls stand out */
+.open-calls{margin-bottom:32px}
+.open-calls>h2{margin:0 0 14px;font:600 22px Poppins,'Segoe UI',sans-serif;color:#7A1424;display:flex;align-items:center;gap:10px}
+.open-calls>h2::before{content:"";width:10px;height:10px;border-radius:50%;background:#C0283F;box-shadow:0 0 0 0 rgba(192,40,63,.5);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(192,40,63,0)}100%{box-shadow:0 0 0 0 rgba(192,40,63,0)}}
+.call{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;background:#FFF5F6;border:1px solid #F0CDD3;border-left:5px solid #7A1424;border-radius:4px;padding:24px 28px;margin-bottom:14px}
+.call>div{flex:1 1 380px;min-width:0}
+.call h3{margin:6px 0 6px;font:600 22px/1.3 Poppins,'Segoe UI',sans-serif;color:#0B1A2C}
+.call h3 a{color:inherit;text-decoration:none}.call h3 a:hover{text-decoration:underline}
+.call p{margin:0;color:#3A4556;font-size:16px}
+.call .dl{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:#7A1424;font-size:15px}
+.call .acts{display:flex;flex-wrap:wrap;gap:10px}
+.btn-acc{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;background:#7A1424;color:#FFFFFF!important;text-decoration:none;font-weight:600;border-radius:4px}
+.btn-acc:hover{background:#5B0A1A}
+.btn-line{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border:1.5px solid #7A1424;color:#7A1424!important;text-decoration:none;font-weight:600;border-radius:4px}
+.mini li.hot{background:#FFF5F6;border-left:4px solid #7A1424;padding-left:12px;margin:0 -12px}
+.nitem h3 a{color:inherit;text-decoration:none}.nitem h3 a:hover{text-decoration:underline}
+/* single news story */
+.story{max-width:860px;margin:0 auto;padding:56px 24px 88px}
+.story .m{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:18px;color:#5A6473;font-size:15px}
+.story img{width:100%;border-radius:4px;display:block;margin:0 0 24px}
+.story p{font-size:19px;line-height:1.7;color:#1B2433;margin:0 0 20px}
+.story .callbox{background:#FFF5F6;border:1px solid #F0CDD3;border-left:5px solid #7A1424;border-radius:4px;padding:22px 26px;margin:8px 0 28px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between}
+.story .back{display:inline-flex;align-items:center;gap:6px;font-weight:600;margin-top:12px}
+
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="wrap bar">
+<a class="brand" href="#/"><img src="images/acrl-logo.png" alt="Air and Climate Research Lab at BUET"></a>
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>Menu</button>
+<nav id="nav" class="nav" aria-label="Main"><ul><li data-top="home" class="has-sub"><div class="top"><a href="#/">Home</a><button type="button" class="sub-toggle" aria-expanded="false" aria-label="Show Home pages"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5l3 3 3-3"></path></svg></button></div><ul class="sub"><li><a href="#/about">About</a></li><li><a href="#/contact">Contact</a></li></ul></li><li data-top="research" class="has-sub"><div class="top"><a href="#/research">Research</a><button type="button" class="sub-toggle" aria-expanded="false" aria-label="Show Research pages"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5l3 3 3-3"></path></svg></button></div><ul class="sub"><li><a href="#/research/projects">Projects</a></li><li class="indent"><a href="#/research/projects/aqm">Air quality management</a></li><li class="indent"><a href="#/research/projects/heat">Mobile air quality monitoring (HEAT)</a></li></ul></li><li data-top="people" class="has-sub"><div class="top"><a href="#/people">People</a><button type="button" class="sub-toggle" aria-expanded="false" aria-label="Show People pages"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5l3 3 3-3"></path></svg></button></div><ul class="sub"><li><a href="#/people/faculty">Faculty</a></li><li><a href="#/people/collaborators">Collaborators</a></li><li><a href="#/people/members">Lab members</a></li><li><a href="#/people/alumni">Alumni</a></li></ul></li><li data-top="ne" class="has-sub"><div class="top"><a href="#/news-events">News &amp; Events</a><button type="button" class="sub-toggle" aria-expanded="false" aria-label="Show News &amp; Events pages"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5l3 3 3-3"></path></svg></button></div><ul class="sub"><li><a href="#/news">News</a></li><li><a href="#/events">Events</a></li></ul></li><li data-top="network"><div class="top"><a href="#/network">Researchers’ Network</a></div></li><li data-top="publications"><div class="top"><a href="#/publications">Publications</a></div></li></ul></nav>
+<img class="buet" src="images/buet-logo.png" alt="BUET emblem">
+</div>
+</header>
+<div class="page" id="p-home">
+
+<section style="background: #0B1A2C; color: #FFFFFF; position: relative; overflow: hidden">
+<canvas id="heroMap" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block"></canvas>
+<div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 96px 24px 104px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
+<div style="flex: 1 1 540px; min-width: 0">
+<p style="margin: 0 0 16px; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: #A9C4DE">Bangladesh University of Engineering and Technology</p>
+<h1 style="margin: 0 0 20px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 64px; line-height: 1.06; letter-spacing: -0.01em">Air and Climate Research Lab</h1>
+<p style="margin: 0 0 36px; font-size: 21px; color: #D4DEE9; max-width: 560px">Facilitating a clearer picture of air pollution and climate management in Bangladesh.</p>
+<a href="#/about" style="display: inline-block; background: #FFFFFF; color: #0B1A2C; text-decoration: none; font-weight: 600; padding: 14px 26px; border-radius: 4px">Learn more</a>
+</div>
+<div aria-hidden="true" style="flex: 1 1 380px; min-width: 0; height: 440px"></div>
+</div>
+</section>
+<div class="li-row"><a href="https://www.linkedin.com/company/air-and-climate-research-lab-buet/" target="_blank" rel="noopener" aria-label="ACRL on LinkedIn" title="ACRL on LinkedIn"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg></a></div>
+
+<section aria-labelledby="about-h" style="max-width: 1200px; margin: 0 auto; padding: 32px 24px 64px; display: flex; flex-wrap: wrap; gap: 24px 64px">
+<h2 id="about-h" style="flex: 1 1 320px; margin: 0; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 34px; line-height: 1.2; color: #0B1A2C">Atmospheric science, air quality and climate research at BUET</h2>
+<div style="flex: 1.4 1 480px">
+<p style="margin: 0 0 20px; font-size: 20px; line-height: 1.65; color: #3A4556">ACRL combines field observations, environmental monitoring, laboratory analysis and computational modeling to improve understanding of air pollution and regional atmospheric conditions in Bangladesh.</p>
+<a href="#/about" style="font-weight: 600">About the lab</a>
+</div>
+</section>
+
+<section aria-labelledby="areas" style="max-width: 1200px; margin: 0 auto; padding: 32px 24px 72px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 24px"><h2 id="areas" style="margin: 0 0 0px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 36px; line-height: 1.2; color: #0B1A2C">What we work on</h2><a href="#/research" style="font-weight: 600">Our research</a></div>
+<div class="areas" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px"><div style="background: #2E6596; color: #FFFFFF; padding: 24px; min-height: 230px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box"><span style="font-size: 14px; color: #D6E4F1">Emissions</span><span><h3 style="margin: 0 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 20px; line-height: 1.25">Emission inventories</h3><span style="font-size: 15px; line-height: 1.5; color: #E3ECF5">High-resolution estimates of emissions from major and minor sources, mapped across the country.</span></span></div><div style="background: #1F4E7A; color: #FFFFFF; padding: 24px; min-height: 230px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box"><span style="font-size: 14px; color: #D6E4F1">Models</span><span><h3 style="margin: 0 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 20px; line-height: 1.25">Air quality modeling</h3><span style="font-size: 15px; line-height: 1.5; color: #E3ECF5">Chemical transport and reduced-complexity models to test policies before they are put in place.</span></span></div><div style="background: #6B1322; color: #FFFFFF; padding: 24px; min-height: 230px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box"><span style="font-size: 14px; color: #F1D6DB">Sources</span><span><h3 style="margin: 0 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 20px; line-height: 1.25">Source apportionment</h3><span style="font-size: 15px; line-height: 1.5; color: #F6E4E7">Using the chemistry of PM₂.₅ to find out where pollution comes from.</span></span></div><div style="background: #8C3A4A; color: #FFFFFF; padding: 24px; min-height: 230px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box"><span style="font-size: 14px; color: #F1D6DB">Sensors</span><span><h3 style="margin: 0 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 20px; line-height: 1.25">Monitoring and exposure</h3><span style="font-size: 15px; line-height: 1.5; color: #F6E4E7">Monitoring across urban, rural and near-source sites, with mapping of population exposure.</span></span></div><div style="background: #0B1A2C; color: #FFFFFF; padding: 24px; min-height: 230px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box"><span style="font-size: 14px; color: #C9D3DE">People</span><span><h3 style="margin: 0 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 20px; line-height: 1.25">Capacity building</h3><span style="font-size: 15px; line-height: 1.5; color: #DCE3EB">Training regulators, students and professionals, and opening data to the public.</span></span></div></div>
+</section>
+
+<section aria-labelledby="projects" style="background: #FFFFFF; border-top: 1px solid #E3E1DA; border-bottom: 1px solid #E3E1DA">
+<div style="max-width: 1200px; margin: 0 auto; padding: 80px 24px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 32px"><h2 id="projects" style="margin: 0; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 36px; line-height: 1.2; color: #0B1A2C">Current projects</h2><a href="#/research/projects" style="font-weight: 600">See all projects</a></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px 40px">
+<article class="proj" style="display: flex; flex-direction: column; gap: 14px; min-width: 0">
+<div class="ph" style="border-radius: 4px; overflow: hidden"><div role="img" aria-label="Project photo placeholder" style="height: 260px; background: #E9EEF3; display: flex; align-items: center; justify-content: center; font-size: 15px; color: #5A6473">[Project photo]</div></div>
+<h3 style="margin: 0; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 24px; line-height: 1.3; color: #0B1A2C">Developing Tools to Improve Air Quality Management in Bangladesh</h3>
+<p style="margin: 0; color: #3A4556">Building the emission inventory, air quality models, monitoring data and local expertise Bangladesh needs to plan and track its national clean air program.</p>
+<a href="#/research/projects/aqm" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; text-decoration: underline">Learn more <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11L11 5"></path><path d="M6 5h5v5"></path></svg></a>
+</article>
+<article class="proj" style="display: flex; flex-direction: column; gap: 14px; min-width: 0">
+<div class="ph" style="border-radius: 4px; overflow: hidden"><div role="img" aria-label="Project photo placeholder" style="height: 260px; background: #E9EEF3; display: flex; align-items: center; justify-content: center; font-size: 15px; color: #5A6473">[Project photo]</div></div>
+<h3 style="margin: 0; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 24px; line-height: 1.3; color: #0B1A2C">Development of Mobile Air Quality Monitoring Unit for High-Resolution Air Pollution Mapping</h3>
+<p style="margin: 0; color: #3A4556">A vehicle-mounted unit that maps air pollution at finer spatial resolution than fixed stations can provide.</p>
+<a href="#/research/projects/heat" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; text-decoration: underline">Learn more <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11L11 5"></path><path d="M6 5h5v5"></path></svg></a>
+</article>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="news-h" style="max-width: 1200px; margin: 0 auto; padding: 80px 24px 56px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 24px"><h2 id="news-h" style="margin: 0 0 0px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 36px; line-height: 1.2; color: #0B1A2C">News and events</h2><a href="#/news-events" style="font-weight: 600">All news and events</a></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+<article style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
+<img src="images/news-freihardt.jpg" alt="ACRL members with Dr. Jan Freihardt at the Department of Civil Engineering, BUET" style="width: 100%; height: 220px; object-fit: cover; object-position: center; display: block">
+<div style="padding: 22px 24px 26px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 600; color: #1F5A8C">6 October 2026</p>
+<h3 style="margin: 0 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3; color: #0B1A2C">ACRL welcomes Dr. Jan Freihardt</h3>
+<p style="margin: 0 0 14px; font-size: 16px; color: #3A4556">A new collaboration on low-cost sensor monitoring and how neighborhood-scale air quality information shapes public awareness and response.</p>
+<a href="#/news/freihardt" style="font-size: 15px; font-weight: 600">Read more</a>
+</div>
+</article>
+<article style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
+<img src="images/news-grad-fellowship.jpg" alt="Call for proposals poster: Graduate Student Fellowship for Air Pollution Research in Bangladesh" style="width: 100%; height: 220px; object-fit: cover; object-position: top; display: block">
+<div style="padding: 22px 24px 26px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 600; color: #1F5A8C">Closed 30 September 2026</p>
+<h3 style="margin: 0 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3; color: #0B1A2C">Graduate Student Fellowship for Air Pollution Research</h3>
+<p style="margin: 0 0 14px; font-size: 16px; color: #3A4556">Up to 10 graduate students across Bangladesh receive BDT 100,000 and mentorship each cycle, through UW, BUET and the University of Dhaka.</p>
+<a href="#/news/grad-fellowship" style="font-size: 15px; font-weight: 600">Read more</a>
+</div>
+</article>
+<article style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
+<img src="images/news-hiring.jpg" alt="Hiring poster: Project Manager for air pollution research project at BUET" style="width: 100%; height: 220px; object-fit: cover; object-position: top; display: block">
+<div style="padding: 22px 24px 26px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 600; color: #1F5A8C">Closed 8 August 2026</p>
+<h3 style="margin: 0 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 20px; line-height: 1.3; color: #0B1A2C">Hiring: Project Manager and Research Assistants</h3>
+<p style="margin: 0 0 14px; font-size: 16px; color: #3A4556">The BUET and UW project recruited a project manager to lead nationwide monitoring, and research assistants based at BUET.</p>
+<a href="#/news/hiring" style="font-size: 15px; font-weight: 600">Read more</a>
+</div>
+</article>
+</div>
+</section>
+
+<section aria-labelledby="pubs" style="max-width: 1200px; margin: 0 auto; padding: 32px 24px 64px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 20px"><h2 id="pubs" style="margin: 0 0 0px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 36px; line-height: 1.2; color: #0B1A2C">Publications</h2><a href="#/publications" style="font-weight: 600">All publications</a></div>
+<ol style="list-style: none; margin: 0; padding: 0; border-top: 1px solid #D6D3CA"><li style="padding: 22px 0; border-bottom: 1px solid #D6D3CA; display: flex; flex-wrap: wrap; gap: 8px 32px"><span style="flex: 0 0 56px; font-weight: 600; color: #7A1424">2024</span><span style="flex: 1 1 520px; min-width: 0"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1352231024001729" style="display: block; font-weight: 600; color: #0B1A2C; text-decoration: none">Contrasting intra-urban variability of ultrafine particle number and fine particle mass concentrations in Dhaka, Bangladesh, and Pittsburgh, USA</a><span style="color: #3A4556">Saha PK, Shovon TM, Rahman SM, Marshall JD, Robinson AL, Presto AA. <span style="font-style: italic">Atmospheric Environment</span> 327, 120497.</span></span></li><li style="padding: 22px 0; border-bottom: 1px solid #D6D3CA; display: flex; flex-wrap: wrap; gap: 8px 32px"><span style="flex: 0 0 56px; font-weight: 600; color: #7A1424">2022</span><span style="flex: 1 1 520px; min-width: 0"><span style="display: block; font-weight: 600; color: #0B1A2C">Face mask mandates and risk compensation: an analysis of mobility data during the COVID-19 pandemic in Bangladesh</span><span style="color: #3A4556">Wadud Z, Rahman SM, Enam A. <span style="font-style: italic">BMJ Global Health</span> 7(1).</span></span></li></ol>
+</section>
+
+<section aria-labelledby="join" style="max-width: 1200px; margin: 0 auto; padding: 16px 24px 64px">
+<div style="background: #0B1A2C; color: #FFFFFF; border-radius: 4px; padding: 44px; display: flex; flex-wrap: wrap; gap: 24px 48px; align-items: center">
+<div style="flex: 1.6 1 480px; min-width: 0">
+<p style="margin: 0 0 8px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #A9C4DE">Join us</p>
+<h2 id="join" style="margin: 0 0 10px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2">Work with us on air quality in Bangladesh</h2>
+<p style="margin: 0; color: #D4DEE9">Open positions, fellowships and student opportunities are announced here and on LinkedIn. Open now: PhD Research Fellowship in mobile air quality monitoring, until 31 October 2026.</p>
+</div>
+<a href="#/news-events" style="background: #FFFFFF; color: #0B1A2C; text-decoration: none; font-weight: 600; padding: 13px 22px; border-radius: 4px">See opportunities</a>
+</div>
+</section>
+
+<section aria-label="Partners" style="background: #FFFFFF; border-top: 1px solid #E3E1DA">
+<div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 36px">
+<span style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A6473">Partners</span>
+<img src="images/buet-logo.png" alt="BUET" style="height: 48px; width: 48px">
+<img src="images/uw-logo.png" alt="University of Washington" style="height: 38px; width: auto">
+<img src="images/du-logo.png" alt="University of Dhaka" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"><img src="images/doe-logo.png" alt="Department of Environment, Bangladesh" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"><img src="images/albany-logo.png" alt="University at Albany" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"><img src="images/clarkson-logo.png" alt="Clarkson University" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"><img src="images/iitb-logo.png" alt="IIT Bombay" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"><img src="images/itu-logo.png" alt="Istanbul Technical University" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"><img src="images/ugc-logo.png" alt="University Grants Commission of Bangladesh" style="height: 56px; width: auto; max-width: 170px; object-fit: contain">
+</div>
+</section>
+<section aria-label="Visit or contact us" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 88px">
+<section style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 36px; display: flex; flex-wrap: wrap; gap: 32px 56px">
+<div style="flex: 1 1 360px"><h2 style="margin: 0 0 12px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.2; color: #0B1A2C">Visit or contact us</h2>
+<p style="margin: 0 0 12px; color: #3A4556">Room 652, Dr. Jamilur Reza Choudhury Civil Engineering Building<br>Bangladesh University of Engineering and Technology<br>Dhaka-1000, Bangladesh</p>
+<a href="#/contact" style="display: inline-flex; align-items: center; min-height: 48px; margin-top: 8px; padding: 0 24px; background: #0B1A2C; color: #FFFFFF; text-decoration: none; font-weight: 600; border-radius: 4px">Contact page</a>
+</div>
+</section>
+</section>
+</div>
+<div class="page" id="p-about" hidden>
+
+<section style="background: #0B1A2C; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px">
+<a href="#/" style="display: inline-flex; align-items: center; gap: 8px; margin: 0 0 20px; font-size: 15px; font-weight: 600; color: #A9C4DE; text-decoration: none; min-height: 44px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"></path></svg>Back to home</a>
+<h1 style="margin: 0 0 14px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 52px; line-height: 1.12; max-width: 920px">About the lab</h1>
+<p style="margin: 0; font-size: 20px; color: #D4DEE9; max-width: 760px">Facilitating a clearer picture of air pollution and climate management in Bangladesh.</p>
+</div>
+</section>
+<main style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 88px">
+<section style="display: flex; flex-wrap: wrap; gap: 32px 64px; margin-bottom: 72px">
+<div style="flex: 1 1 320px"><p style="margin: 0 0 8px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A1424">Who we are</p><h2 style="margin: 0 0 0px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Air quality, atmospheric science and climate research at BUET</h2></div>
+<div style="flex: 1.4 1 480px; font-size: 19px; color: #3A4556">
+<p style="margin: 0 0 16px">The Air and Climate Research Lab (ACRL) at Bangladesh University of Engineering and Technology works on atmospheric science, air quality and climate.</p>
+<p style="margin: 0">It combines field observations, environmental monitoring, laboratory analysis and computational modeling to improve understanding of air pollution and regional atmospheric conditions. [Add: when the lab was founded, and its mission in one line]</p>
+</div>
+</section>
+<figure style="margin: 0 0 72px">
+<img src="images/news-freihardt.jpg" alt="ACRL members with Dr. Jan Freihardt at the Department of Civil Engineering, BUET" style="width: 100%; max-height: 560px; object-fit: cover; border-radius: 4px; display: block">
+<figcaption style="margin-top: 10px; font-size: 15px; color: #5A6473">ACRL members with visiting researcher Dr. Jan Freihardt, October 2026.</figcaption>
+</figure>
+<section class="hww reveal-group" aria-labelledby="hww-h">
+<div class="hww-head"><h2 id="hww-h" style="margin: 0 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; color: #0B1A2C">How we work</h2><p style="margin: 0; color: #5A6473; font-size: 17px">Four connected steps, from collecting data to explaining it.</p></div>
+<ol class="hww-steps"><span class="hww-line" aria-hidden="true"></span><li class="hww-step" style="--i:0"><span class="hww-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.6-6-10a6 6 0 0 1 12 0c0 4.4-6 10-6 10z"></path><circle cx="12" cy="11" r="2.2"></circle></svg></span><span class="hww-num">01</span><h3>Field observations</h3><p>Measurements across urban, rural and near-source sites in Bangladesh.</p></li><li class="hww-step" style="--i:1"><span class="hww-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="9" width="10" height="11" rx="1.5"></rect><path d="M12 9V5"></path><path d="M8.5 4.5a5 5 0 0 1 7 0"></path><path d="M6 2.5a8.5 8.5 0 0 1 12 0"></path><path d="M10 14h4"></path></svg></span><span class="hww-num">02</span><h3>Environmental monitoring</h3><p>Reference-grade, chemically speciated and low-cost sensor networks.</p></li><li class="hww-step" style="--i:2"><span class="hww-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"></path><path d="M10 3v6L5 18a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"></path><path d="M7.5 15h9"></path></svg></span><span class="hww-num">03</span><h3>Laboratory analysis</h3><p>Chemical analysis of PM₂.₅ to identify pollution sources.</p></li><li class="hww-step" style="--i:3"><span class="hww-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M3 15h18M9 3v18M15 3v18"></path></svg></span><span class="hww-num">04</span><h3>Computational modeling</h3><p>Emission inventories, chemical transport and data-driven models.</p></li></ol>
+</section>
+<section style="display: flex; flex-wrap: wrap; gap: 40px 64px; margin-bottom: 72px">
+<div style="flex: 1 1 320px"><h2 style="margin: 0 0 16px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Projects</h2>
+<p style="margin: 0 0 10px"><a href="#/research/projects/aqm" style="font-weight: 600">Developing Tools to Improve Air Quality Management in Bangladesh</a></p>
+<p style="margin: 0"><a href="#/research/projects/heat" style="font-weight: 600">Mobile Air Quality Monitoring Unit for High-Resolution Air Pollution Mapping</a></p>
+</div>
+<div style="flex: 1.4 1 480px"><h2 style="margin: 0 0 16px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Partners</h2>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px 40px; padding-top: 8px"><img src="images/buet-logo.png" alt="Bangladesh University of Engineering and Technology" style="height: 64px; width: 64px; object-fit: contain; display: block"><img src="images/uw-logo.png" alt="University of Washington" style="height: 48px; width: auto; max-width: 180px; object-fit: contain; display: block"><img src="images/du-logo.png" alt="University of Dhaka" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"><img src="images/doe-logo.png" alt="Department of Environment, Bangladesh" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"><img src="images/albany-logo.png" alt="University at Albany" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"><img src="images/clarkson-logo.png" alt="Clarkson University" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"><img src="images/iitb-logo.png" alt="IIT Bombay" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"><img src="images/itu-logo.png" alt="Istanbul Technical University" style="height: 56px; width: auto; max-width: 170px; object-fit: contain"></div>
+</div>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 36px; display: flex; flex-wrap: wrap; gap: 32px 56px">
+<div style="flex: 1 1 360px"><h2 style="margin: 0 0 12px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.2; color: #0B1A2C">Visit or contact us</h2>
+<p style="margin: 0 0 12px; color: #3A4556">Room 652, Dr. Jamilur Reza Choudhury Civil Engineering Building<br>Bangladesh University of Engineering and Technology<br>Dhaka-1000, Bangladesh</p>
+<a href="#/contact" style="display: inline-flex; align-items: center; min-height: 48px; margin-top: 8px; padding: 0 24px; background: #0B1A2C; color: #FFFFFF; text-decoration: none; font-weight: 600; border-radius: 4px">Contact page</a>
+</div>
+</section>
+</main>
+
+</div>
+<div class="page" id="p-contact" hidden>
+
+<section style="background: #0B1A2C; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px">
+<a href="#/about" style="display: inline-flex; align-items: center; gap: 8px; margin: 0 0 20px; font-size: 15px; font-weight: 600; color: #A9C4DE; text-decoration: none; min-height: 44px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"></path></svg>Back to About</a>
+<h1 style="margin: 0 0 14px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 52px; line-height: 1.12">Contact</h1>
+<p style="margin: 0 0 48px; font-size: 20px; color: #D4DEE9; max-width: 760px">Get in touch with the lab or reach a member directly.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 32px 56px; align-items: flex-start">
+<div style="flex: 1 1 320px; min-width: 0">
+<h2 style="margin: 0 0 14px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 24px; line-height: 1.25">Air and Climate Research Lab</h2>
+<p style="margin: 0 0 24px; font-size: 17px; line-height: 1.7; color: #D4DEE9">Room 652, Dr. Jamilur Reza Choudhury Civil Engineering Building<br>Bangladesh University of Engineering and Technology<br>Dhaka-1000, Bangladesh</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px">
+<span style="display: inline-flex; align-items: center; gap: 12px; font-weight: 600">Follow ACRL <a href="https://www.linkedin.com/company/air-and-climate-research-lab-buet/" aria-label="ACRL on LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #0A66C2; color: #FFFFFF"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg></a></span>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Bangladesh+University+of+Engineering+and+Technology+Dhaka" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border: 1.5px solid #A9C4DE; border-radius: 4px; color: #FFFFFF; text-decoration: none; font-weight: 600">Get directions</a>
+</div>
+</div>
+<div style="flex: 1.3 1 420px; min-width: 0">
+<div style="position: relative; height: 320px; border-radius: 4px; overflow: hidden; background: #13263D; border: 1px solid rgba(255,255,255,0.15)">
+<svg aria-hidden="true" width="100%" height="100%" viewBox="0 0 640 320" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; display: block"><g fill="none" stroke="#24405F" stroke-width="7" stroke-linecap="round"><path d="M-10 52 L330 40"></path><path d="M-10 122 L330 112"></path><path d="M96 -10 L112 170"></path><path d="M228 -10 L214 170"></path></g><g fill="none" stroke="#1E3653" stroke-width="3"><path d="M-10 18 L330 8"></path><path d="M-10 86 L330 76"></path><path d="M40 -10 L52 170"></path><path d="M162 -10 L162 170"></path><path d="M286 -10 L276 170"></path></g><rect x="122" y="60" width="78" height="44" fill="#7A1424" opacity="0.35"></rect></svg>
+<svg aria-hidden="true" width="30" height="38" viewBox="0 0 44 56" style="position: absolute; left: 50%; top: 40%; transform: translate(-50%, -100%)"><path d="M22 0C10 0 0 9.6 0 21.5 0 37 22 56 22 56s22-19 22-34.5C44 9.6 34 0 22 0z" fill="#C0283F"></path><circle cx="22" cy="21" r="8" fill="#FFFFFF"></circle></svg>
+<span style="position: absolute; left: 50%; top: 44%; transform: translateX(-50%); background: #FFFFFF; color: #0B1A2C; font-size: 13px; font-weight: 600; padding: 4px 10px; white-space: nowrap">ACRL, BUET campus</span>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Bangladesh+University+of+Engineering+and+Technology+Dhaka" style="position: absolute; right: 10px; bottom: 10px; background: #1F5A8C; color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 600; padding: 8px 12px; border-radius: 4px">Open in Google Maps</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<main style="background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 88px">
+<h2 style="margin: 0 0 20px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 28px; line-height: 1.2; color: #0B1A2C">Lab directory</h2>
+<div style="overflow-x: auto; border-top: 2px solid #7A1424">
+<table style="width: 100%; border-collapse: collapse; font-size: 16px; min-width: 560px">
+<thead><tr><th scope="col" style="padding: 12px 16px 10px 0; text-align: left; font-size: 14px; font-weight: 600; color: #5A6473; border-bottom: 1px solid #E3E1DA">Name</th><th scope="col" style="padding: 12px 16px 10px 0; text-align: left; font-size: 14px; font-weight: 600; color: #5A6473; border-bottom: 1px solid #E3E1DA">Designation</th><th scope="col" style="padding: 12px 16px 10px 0; text-align: left; font-size: 14px; font-weight: 600; color: #5A6473; border-bottom: 1px solid #E3E1DA">Email</th></tr></thead>
+<tbody id="dirBody"></tbody>
+</table>
+</div>
+</div>
+</main>
+
+</div>
+<div class="page" id="p-research" hidden>
+<section style="background: #0B1A2C; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px">
+<h1 style="margin: 0 0 14px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 52px; line-height: 1.12; max-width: 920px">Research</h1>
+<p style="margin: 0; font-size: 20px; color: #D4DEE9; max-width: 760px">Methods applied across projects to measure, model and explain air pollution in Bangladesh.</p>
+</div>
+</section>
+<main style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 88px">
+<h2 style="margin: 0 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; color: #0B1A2C">Research areas</h2>
+<p style="margin: 0 0 32px; color: #5A6473; font-size: 17px">Five connected areas of work, shared across the lab’s projects.</p>
+<div class="areas2 reveal-group"><article class="area2" style="--c:#2E6596;--i:0"><div class="area2-top"><span class="area2-num">01</span><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10l5-3v4l5-3v4l5-3v11z"></path><path d="M4 20h16"></path></svg></div><h3>Emission inventories</h3><p>High-resolution estimates of emissions from major and minor sources, mapped across the country.</p></article><article class="area2" style="--c:#1F4E7A;--i:1"><div class="area2-top"><span class="area2-num">02</span><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c3-6 6-6 9 0s6 6 9 0"></path><path d="M3 9c3-6 6-6 9 0s6 6 9 0"></path></svg></div><h3>Air quality modeling</h3><p>Chemical transport and reduced-complexity models to test policies before they are put in place.</p></article><article class="area2" style="--c:#6B1322;--i:2"><div class="area2-top"><span class="area2-num">03</span><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 4v8l6 4"></path></svg></div><h3>Source apportionment</h3><p>Using the chemistry of PM₂.₅ to find out where pollution comes from.</p></article><article class="area2" style="--c:#8C3A4A;--i:3"><div class="area2-top"><span class="area2-num">04</span><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="2"></circle><path d="M8 15a5 5 0 0 1 0-8M16 7a5 5 0 0 1 0 8M5 18a9 9 0 0 1 0-14M19 4a9 9 0 0 1 0 14"></path></svg></div><h3>Monitoring and exposure</h3><p>Monitoring across urban, rural and near-source sites, with mapping of population exposure.</p></article><article class="area2" style="--c:#0B1A2C;--i:4"><div class="area2-top"><span class="area2-num">05</span><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-4 9 4-9 4z"></path><path d="M7 11v5c3 2 7 2 10 0v-5"></path></svg></div><h3>Capacity building</h3><p>Training regulators, students and professionals, and opening data to the public.</p></article></div>
+<section class="proj-teaser" aria-labelledby="pt-h">
+<div><h2 id="pt-h" style="margin: 0 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 26px; color: #0B1A2C">Projects</h2>
+<p style="margin: 0; color: #3A4556">See how these areas come together in the lab’s current projects.</p></div>
+<ul>
+<li><a href="#/research/projects/aqm">Developing Tools to Improve Air Quality Management in Bangladesh <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"></path><path d="M9 4l4 4-4 4"></path></svg></a></li>
+<li><a href="#/research/projects/heat">Development of Mobile Air Quality Monitoring Unit for High-Resolution Air Pollution Mapping <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"></path><path d="M9 4l4 4-4 4"></path></svg></a></li>
+</ul>
+<a class="btn-navy" href="#/research/projects">All projects</a>
+</section>
+</main>
+</div>
+<div class="page" id="p-research-projects" hidden>
+
+
+
+<section style="background: #0B1A2C; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px">
+<h1 style="margin: 0 0 12px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 52px; line-height: 1.1">Projects</h1>
+<p style="margin: 0; font-size: 20px; color: #D4DEE9; max-width: 680px">Projects that build the data, models and expertise Bangladesh needs to manage air pollution.</p>
+</div>
+</section>
+
+<main style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 88px">
+<h2 style="margin: 0 0 24px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; color: #0B1A2C">Projects</h2>
+
+<article style="background: #FFFFFF; border: 1px solid #E3E1DA; border-top: 4px solid #7A1424; border-radius: 4px; padding: 40px; margin-bottom: 28px">
+<h3 style="margin: 0 0 12px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 32px; line-height: 1.2; color: #0B1A2C; max-width: 860px">Developing Tools to Improve Air Quality Management in Bangladesh</h3>
+<p style="margin: 0 0 32px; font-size: 19px; color: #3A4556; max-width: 800px">Building the emission inventory, air quality models, monitoring data and local expertise Bangladesh needs to plan and track its national clean air program.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 32px 56px">
+<div style="flex: 1.3 1 440px; min-width: 0">
+<h4 style="margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A6473">Scope of work</h4>
+<ol style="margin: 0; padding: 0; list-style: none; border-top: 1px solid #E3E1DA"><li style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3E1DA"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; color: #7A1424">01</span><span>National emission inventory</span></li><li style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3E1DA"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; color: #7A1424">02</span><span>National source-resolved air pollution intervention model</span></li><li style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3E1DA"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; color: #7A1424">03</span><span>Chemically speciated PM₂.₅ monitoring and source apportionment</span></li><li style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3E1DA"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; color: #7A1424">04</span><span>Nationwide low-cost sensor measurements and data-driven air quality models</span></li><li style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3E1DA"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; color: #7A1424">05</span><span>Knowledge to action: training for Department of Environment staff and local professionals, public data and community outreach</span></li></ol>
+</div>
+<div style="flex: 1 1 320px; min-width: 0">
+<h4 style="margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A6473">Partners</h4>
+<p style="margin: 0">Bangladesh University of Engineering and Technology · University of Washington · University of Dhaka · Department of Environment, Bangladesh · University at Albany · Clarkson University · IIT Bombay · Istanbul Technical University</p>
+<h4 style="margin: 20px 0 8px; font-size: 15px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A6473">Funded by</h4>
+<p style="margin: 0">University of Washington</p>
+<h4 style="margin: 20px 0 8px; font-size: 15px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A6473">Principal Investigators</h4>
+<p style="margin: 0 0 20px">Provat Kumar Saha · Julian Marshall (Co-PI) · Sheikh Mokhlesur Rahman</p>
+<a href="#/research/projects/aqm" style="font-weight: 600">Project page</a>
+</div>
+</div>
+<div style="margin-top: 36px; background: #F1F4F7; border-radius: 4px; padding: 28px; display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: center">
+<div style="flex: 1.6 1 420px; min-width: 0">
+<p style="margin: 0 0 4px; font-size: 14px; font-weight: 600; color: #1F5A8C">Part of this project</p>
+<h4 style="margin: 0 0 6px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 20px; color: #0B1A2C">Graduate Student Fellowship for Air Pollution Research in Bangladesh</h4>
+<p style="margin: 0; font-size: 16px; color: #3A4556">About 30 graduate students over three years, up to 10 per annual cycle, each receiving BDT 100,000, mentorship and access to data.</p>
+</div>
+<a href="#/research/projects/aqm~fellowship" style="font-weight: 600">Fellowship details</a>
+</div>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 40px; margin-bottom: 0">
+<h3 style="margin: 0 0 12px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.25; color: #0B1A2C; max-width: 860px">Development of Mobile Air Quality Monitoring Unit for High-Resolution Air Pollution Mapping</h3>
+<p style="margin: 0 0 28px; font-size: 18px; color: #3A4556; max-width: 800px">A vehicle-mounted monitoring unit that maps air pollution at finer spatial resolution than fixed stations can provide.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 32px 56px">
+<div style="flex: 1.3 1 440px; min-width: 0">
+<h4 style="margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A6473">Scope of work</h4>
+<ol style="margin: 0; padding: 0; list-style: none; border-top: 1px solid #E3E1DA"><li style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3E1DA"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; color: #7A1424">01</span><span>Development and calibration of mobile monitoring systems</span></li><li style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3E1DA"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; color: #7A1424">02</span><span>High-resolution pollution mapping and model validation</span></li><li style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3E1DA"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; color: #7A1424">03</span><span>Machine learning and GIS-based air quality modeling</span></li><li style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3E1DA"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; color: #7A1424">04</span><span>Field monitoring and empirical model development</span></li></ol>
+</div>
+<div style="flex: 1 1 320px; min-width: 0">
+<h4 style="margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A6473">Partners</h4>
+<p style="margin: 0">Department of Civil Engineering, Bangladesh University of Engineering and Technology</p>
+<h4 style="margin: 20px 0 8px; font-size: 15px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A6473">Funded by</h4>
+<p style="margin: 0">Higher Education Acceleration and Transformation (HEAT) Project, University Grants Commission of Bangladesh</p>
+<h4 style="margin: 20px 0 8px; font-size: 15px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A6473">Principal Investigators</h4>
+<p style="margin: 0 0 20px">Sheikh Mokhlesur Rahman</p>
+<a href="#/research/projects/heat" style="font-weight: 600">Project page</a>
+</div>
+</div>
+</article>
+
+
+</main>
+
+
+
+</div>
+<div class="page" id="p-aqm" hidden>
+
+<section style="background: #0B1A2C; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px">
+<nav aria-label="Breadcrumb" style="margin: 0 0 20px; font-size: 15px"><a href="#/research/projects" style="color: #A9C4DE">Research</a><span style="color: #7F93A8"> / </span><span style="color: #D4DEE9">Project</span></nav><h1 style="margin: 0 0 14px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 42px; line-height: 1.12; max-width: 920px">Developing Tools to Improve Air Quality Management in Bangladesh</h1>
+<p style="margin: 0; font-size: 20px; color: #D4DEE9; max-width: 760px">To give Bangladesh the data, models, and trained people needed to design and track air quality mitigation.</p>
+</div>
+</section>
+<main style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 88px">
+<section aria-labelledby="ov-h" style="margin-bottom: 72px; background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; overflow: hidden">
+<div style="display: flex; flex-wrap: wrap">
+<div style="flex: 1.6 1 520px; min-width: 0; padding: 44px 44px 40px; box-sizing: border-box">
+<h2 id="ov-h" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A1424">Overview</h2>
+<p style="margin: 0; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-weight: 500; font-size: 24px; line-height: 1.45; color: #0B1A2C">The project builds the tools and local expertise Bangladesh needs to plan and track cost-effective air quality management.</p>
+<p style="margin: 18px 0 0; font-size: 18px; line-height: 1.65; color: #3A4556">It develops a national emission inventory, a source-resolved intervention model, chemically speciated PM₂.₅ monitoring, nationwide low-cost sensor measurements, and training and public data for government and professionals.</p>
+</div>
+<aside style="flex: 1 1 300px; min-width: 0; background: #0B1A2C; padding: 44px 40px; box-sizing: border-box">
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 20px"><div><dt style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A9C4DE">Duration</dt><dd style="margin: 4px 0 0; font-size: 17px; color: #FFFFFF">3 years</dd></div><div><dt style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A9C4DE">Start date</dt><dd style="margin: 4px 0 0; font-size: 17px; color: #FFFFFF">[Confirm]</dd></div><div><dt style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A9C4DE">Funded by</dt><dd style="margin: 4px 0 0; font-size: 17px; color: #FFFFFF">University of Washington</dd></div><div><dt style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A9C4DE">Lead institutions</dt><dd style="margin: 4px 0 0; font-size: 17px; color: #FFFFFF">BUET and University of Washington</dd></div></dl>
+<a href="#/contact" style="display: inline-flex; align-items: center; min-height: 44px; margin-top: 28px; padding: 0 20px; background: #FFFFFF; color: #0B1A2C; text-decoration: none; font-weight: 600; border-radius: 4px">Contact the team</a>
+</aside>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-right: -1px"><div style="padding: 28px 32px; border-top: 1px solid #E3E1DA; border-right: 1px solid #E3E1DA"><span style="display: block; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 44px; line-height: 1.05; color: #7A1424">10</span><span style="font-size: 15px; color: #3A4556">PM₂.₅ speciation sites</span></div><div style="padding: 28px 32px; border-top: 1px solid #E3E1DA; border-right: 1px solid #E3E1DA"><span style="display: block; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 44px; line-height: 1.05; color: #7A1424">~50</span><span style="font-size: 15px; color: #3A4556">Low-cost sensor sites</span></div><div style="padding: 28px 32px; border-top: 1px solid #E3E1DA; border-right: 1px solid #E3E1DA"><span style="display: block; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 44px; line-height: 1.05; color: #7A1424">8</span><span style="font-size: 15px; color: #3A4556">Partner institutions</span></div><div style="padding: 28px 32px; border-top: 1px solid #E3E1DA; border-right: 1px solid #E3E1DA"><span style="display: block; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 44px; line-height: 1.05; color: #7A1424">~30</span><span style="font-size: 15px; color: #3A4556">Graduate fellows</span></div></div>
+</section>
+<section style="margin-bottom: 72px"><h2 style="margin: 0 0 24px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">What the project does</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px"><div style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 24px"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 15px; color: #7A1424">01</span><h3 style="margin: 6px 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3; color: #0B1A2C">National emission inventory</h3><p style="margin: 0; font-size: 16px; color: #3A4556">High-resolution estimates of emissions from major and minor sources, mapped across Bangladesh.</p></div><div style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 24px"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 15px; color: #7A1424">02</span><h3 style="margin: 6px 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3; color: #0B1A2C">National source-resolved air pollution intervention model</h3><p style="margin: 0; font-size: 16px; color: #3A4556">A model that links sources to pollution levels, to test interventions before they are put in place.</p></div><div style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 24px"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 15px; color: #7A1424">03</span><h3 style="margin: 6px 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3; color: #0B1A2C">Chemically speciated PM₂.₅ monitoring and source apportionment</h3><p style="margin: 0; font-size: 16px; color: #3A4556">Using the chemistry of PM₂.₅ from 10 speciation sites to find out where pollution comes from.</p></div><div style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 24px"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 15px; color: #7A1424">04</span><h3 style="margin: 6px 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3; color: #0B1A2C">Nationwide low-cost sensor measurements</h3><p style="margin: 0; font-size: 16px; color: #3A4556">About 50 low-cost sensor sites feeding data-driven air quality models.</p></div><div style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 24px"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 15px; color: #7A1424">05</span><h3 style="margin: 6px 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3; color: #0B1A2C">Knowledge to action</h3><p style="margin: 0; font-size: 16px; color: #3A4556">Training for Department of Environment staff and local professionals, public data and community outreach.</p></div></div></section>
+<section style="margin-bottom: 72px">
+<h2 style="margin: 0 0 12px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Monitoring network</h2>
+<p style="margin: 0 0 24px; color: #3A4556; max-width: 760px">Chemical speciation sites and low-cost sensors placed across urban, rural and near-source locations in Bangladesh.</p>
+<div role="img" aria-label="Map placeholder" style="height: 420px; border-radius: 4px; background: #E9EEF3; display: flex; align-items: center; justify-content: center; font-size: 15px; color: #5A6473">[Map of speciation and sensor sites]</div>
+</section>
+<section id="team" style="margin-bottom: 72px">
+<h2 style="margin: 0 0 24px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Project team</h2>
+<div style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; overflow: hidden">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px 40px; padding: 36px 40px 32px">
+<div style="min-width: 0"><h3 style="margin: 0 0 4px; padding-bottom: 10px; border-bottom: 2px solid #7A1424; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A1424">Project leads<span style="margin-left: 8px; color: #8A93A0">3</span></h3><ul style="list-style: none; margin: 0; padding: 0"><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><a href="#/people" style="display: block; font-weight: 600; color: #0B1A2C; text-decoration: none">Provat Kumar Saha</a><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Principal Investigator · University of Washington</span></li><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><a href="#/people" style="display: block; font-weight: 600; color: #0B1A2C; text-decoration: none">Julian Marshall</a><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Co-Principal Investigator · University of Washington</span></li><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><a href="#/people" style="display: block; font-weight: 600; color: #0B1A2C; text-decoration: none">Sheikh Mokhlesur Rahman</a><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Principal Investigator · BUET</span></li></ul></div><div style="min-width: 0"><h3 style="margin: 0 0 4px; padding-bottom: 10px; border-bottom: 2px solid #7A1424; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A1424">Faculty investigators<span style="margin-left: 8px; color: #8A93A0">4</span></h3><ul style="list-style: none; margin: 0; padding: 0"><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><a href="#/people" style="display: block; font-weight: 600; color: #0B1A2C; text-decoration: none">Tanvir Ahmed</a><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Civil Engineering · BUET</span></li><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><span style="display: block; font-weight: 600; color: #0B1A2C">Shoeb Ahmed</span><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Chemical Engineering · BUET</span></li><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><span style="display: block; font-weight: 600; color: #0B1A2C">Aman Uddin</span><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Mechanical Engineering · BUET</span></li><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><span style="display: block; font-weight: 600; color: #0B1A2C">Abdus Salam</span><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Chemistry · University of Dhaka</span></li></ul></div><div style="min-width: 0"><h3 style="margin: 0 0 4px; padding-bottom: 10px; border-bottom: 2px solid #7A1424; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A1424">Resource person<span style="margin-left: 8px; color: #8A93A0">1</span></h3><ul style="list-style: none; margin: 0; padding: 0"><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><a href="#/people" style="display: block; font-weight: 600; color: #0B1A2C; text-decoration: none">Alper Ünal</a><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Emission inventory, WRF-Chem and CMAQ · Istanbul Technical University</span></li></ul></div><div style="min-width: 0"><h3 style="margin: 0 0 4px; padding-bottom: 10px; border-bottom: 2px solid #7A1424; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A1424">Research team<span style="margin-left: 8px; color: #8A93A0">3</span></h3><ul style="list-style: none; margin: 0; padding: 0"><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><a href="#/people" style="display: block; font-weight: 600; color: #0B1A2C; text-decoration: none">Mohsinat Ahmed Laboni</a><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Research Assistant · BUET</span></li><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><a href="#/people" style="display: block; font-weight: 600; color: #0B1A2C; text-decoration: none">Sayma Sultana Keya</a><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Research Assistant · BUET</span></li><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><span style="display: block; font-weight: 600; color: #0B1A2C">[Name]</span><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Research Assistant · BUET</span></li></ul></div>
+</div>
+<a href="#/people" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding: 20px 40px; background: #F1F4F7; border-top: 1px solid #E3E1DA; color: #0B1A2C; text-decoration: none">
+<span style="font-size: 16px; color: #3A4556">Profiles, research interests and contact details for the team</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: #1F5A8C">Learn more on the People page <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"></path><path d="M9 4l4 4-4 4"></path></svg></span>
+</a>
+</div>
+</section>
+<section aria-label="Partner institutions" style="margin-bottom: 72px">
+<h2 style="margin: 0 0 20px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Partner institutions</h2>
+<div style="border-top: 1px solid #E3E1DA"><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA; display: flex; flex-wrap: wrap; gap: 4px 24px"><span style="flex: 0 0 160px; font-size: 15px; font-weight: 600; color: #5A6473">Bangladesh</span><span style="flex: 1 1 300px">BUET · University of Dhaka · Department of Environment</span></div><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA; display: flex; flex-wrap: wrap; gap: 4px 24px"><span style="flex: 0 0 160px; font-size: 15px; font-weight: 600; color: #5A6473">USA</span><span style="flex: 1 1 300px">University of Washington · University at Albany · Clarkson University</span></div><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA; display: flex; flex-wrap: wrap; gap: 4px 24px"><span style="flex: 0 0 160px; font-size: 15px; font-weight: 600; color: #5A6473">India</span><span style="flex: 1 1 300px">IIT Bombay</span></div><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA; display: flex; flex-wrap: wrap; gap: 4px 24px"><span style="flex: 0 0 160px; font-size: 15px; font-weight: 600; color: #5A6473">Advisor</span><span style="flex: 1 1 300px">Istanbul Technical University</span></div></div>
+</section>
+<section id="fellowship" style="background: #FFFFFF; border: 1px solid #E3E1DA; border-top: 4px solid #7A1424; border-radius: 4px; padding: 40px; display: flex; flex-wrap: wrap; gap: 32px 56px; margin-bottom: 72px">
+<div style="flex: 1.5 1 480px; min-width: 0">
+<p style="margin: 0 0 8px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A1424">Part of this project</p>
+<h2 style="margin: 0 0 12px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.2; color: #0B1A2C">Graduate Student Fellowship for Air Pollution Research in Bangladesh</h2>
+<p style="margin: 0 0 16px; color: #3A4556">Supports graduate students across Bangladesh to carry out thesis or dissertation research on air pollution. Over the three-year project, about 30 students are supported, up to 10 per annual cycle, selected competitively.</p>
+<p style="margin: 0; color: #3A4556">Eligible: current MS or higher-level graduate students at any recognized public or private university in Bangladesh, with a supervisor at their home university.</p>
+</div>
+<div style="flex: 1 1 280px"><dl style="margin: 0; border-top: 1px solid #E3E1DA"><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA"><dt style="font-size: 14px; font-weight: 600; color: #5A6473">Support</dt><dd style="margin: 2px 0 0">BDT 100,000 per fellow, plus mentorship and access to data</dd></div><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA"><dt style="font-size: 14px; font-weight: 600; color: #5A6473">Research period</dt><dd style="margin: 2px 0 0">Generally 1 to 2 years</dd></div><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA"><dt style="font-size: 14px; font-weight: 600; color: #5A6473">2026 cycle</dt><dd style="margin: 2px 0 0">Closed 30 September 2026</dd></div><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA"><dt style="font-size: 14px; font-weight: 600; color: #5A6473">Next cycle</dt><dd style="margin: 2px 0 0">[Announced on this page and LinkedIn]</dd></div></dl></div>
+</section>
+<section><h2 style="margin: 0 0 16px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Related news</h2>
+<ul style="list-style: none; margin: 0; padding: 0; border-top: 1px solid #D6D3CA">
+<li style="padding: 16px 0; border-bottom: 1px solid #D6D3CA"><span style="font-size: 14px; color: #5A6473">Closed 30 September 2026</span><br><a href="#/news-events" style="font-weight: 600">Graduate Student Fellowship for Air Pollution Research: call for proposals</a></li>
+<li style="padding: 16px 0; border-bottom: 1px solid #D6D3CA"><span style="font-size: 14px; color: #5A6473">Closed 8 August 2026</span><br><a href="#/news-events" style="font-weight: 600">Hiring: Project Manager and Research Assistants</a></li>
+</ul></section>
+</main>
+
+</div>
+<div class="page" id="p-heat" hidden>
+
+<section style="background: #0B1A2C; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px">
+<nav aria-label="Breadcrumb" style="margin: 0 0 20px; font-size: 15px"><a href="#/research/projects" style="color: #A9C4DE">Research</a><span style="color: #7F93A8"> / </span><span style="color: #D4DEE9">Project</span></nav><h1 style="margin: 0 0 14px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 42px; line-height: 1.12; max-width: 920px">Development of Mobile Air Quality Monitoring Unit for High-Resolution Air Pollution Mapping</h1>
+<p style="margin: 0; font-size: 20px; color: #D4DEE9; max-width: 760px">A vehicle-mounted monitoring unit that maps air pollution at finer spatial resolution than fixed stations can provide.</p>
+</div>
+</section>
+<main style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 88px">
+<section aria-labelledby="ov-h" style="margin-bottom: 72px; background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; overflow: hidden">
+<div style="display: flex; flex-wrap: wrap">
+<div style="flex: 1.6 1 520px; min-width: 0; padding: 44px 44px 40px; box-sizing: border-box">
+<h2 id="ov-h" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A1424">Overview</h2>
+<p style="margin: 0; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 500; font-size: 24px; line-height: 1.45; color: #0B1A2C">The project builds a mobile air quality monitoring unit and uses its measurements to map air pollution street by street.</p>
+<p style="margin: 18px 0 0; font-size: 18px; line-height: 1.65; color: #3A4556">It covers development and calibration of the mobile system, high-resolution pollution mapping and model validation, machine learning and GIS-based air quality modeling, and field monitoring for empirical model development.</p>
+</div>
+<aside style="flex: 1 1 300px; min-width: 0; background: #0B1A2C; padding: 44px 40px; box-sizing: border-box">
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 20px"><div><dt style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A9C4DE">Duration</dt><dd style="margin: 4px 0 0; font-size: 17px; color: #FFFFFF">[Confirm]</dd></div><div><dt style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A9C4DE">Project ID</dt><dd style="margin: 4px 0 0; font-size: 17px; color: #FFFFFF">HEAT sub-project, PIN 13125</dd></div><div><dt style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A9C4DE">Funded by</dt><dd style="margin: 4px 0 0; font-size: 17px; color: #FFFFFF">HEAT Project, University Grants Commission of Bangladesh</dd></div><div><dt style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A9C4DE">Lead institution</dt><dd style="margin: 4px 0 0; font-size: 17px; color: #FFFFFF">Department of Civil Engineering, BUET</dd></div></dl>
+<a href="#/contact" style="display: inline-flex; align-items: center; min-height: 44px; margin-top: 28px; padding: 0 20px; background: #FFFFFF; color: #0B1A2C; text-decoration: none; font-weight: 600; border-radius: 4px">Contact the team</a>
+</aside>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-right: -1px"><div style="padding: 28px 32px; border-top: 1px solid #E3E1DA; border-right: 1px solid #E3E1DA"><span style="display: block; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 44px; line-height: 1.05; color: #7A1424">1</span><span style="font-size: 15px; color: #3A4556">Mobile monitoring unit</span></div><div style="padding: 28px 32px; border-top: 1px solid #E3E1DA; border-right: 1px solid #E3E1DA"><span style="display: block; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 44px; line-height: 1.05; color: #7A1424">4</span><span style="font-size: 15px; color: #3A4556">Work areas</span></div><div style="padding: 28px 32px; border-top: 1px solid #E3E1DA; border-right: 1px solid #E3E1DA"><span style="display: block; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 44px; line-height: 1.05; color: #7A1424">1</span><span style="font-size: 15px; color: #3A4556">PhD Research Fellow</span></div><div style="padding: 28px 32px; border-top: 1px solid #E3E1DA; border-right: 1px solid #E3E1DA"><span style="display: block; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 44px; line-height: 1.05; color: #7A1424">[#]</span><span style="font-size: 15px; color: #3A4556">Routes mapped</span></div></div>
+</section>
+<section style="margin-bottom: 72px"><h2 style="margin: 0 0 24px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">What the project does</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px"><div style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 24px"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 15px; color: #7A1424">01</span><h3 style="margin: 6px 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3; color: #0B1A2C">Development and calibration of mobile monitoring systems</h3><p style="margin: 0; font-size: 16px; color: #3A4556">Building the vehicle-mounted unit and calibrating its instruments so its readings can be trusted.</p></div><div style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 24px"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 15px; color: #7A1424">02</span><h3 style="margin: 6px 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3; color: #0B1A2C">High-resolution pollution mapping and model validation</h3><p style="margin: 0; font-size: 16px; color: #3A4556">Turning on-road measurements into fine-grained pollution maps and using them to check model results.</p></div><div style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 24px"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 15px; color: #7A1424">03</span><h3 style="margin: 6px 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3; color: #0B1A2C">Machine learning and GIS-based air quality modeling</h3><p style="margin: 0; font-size: 16px; color: #3A4556">Combining mobile measurements with spatial data to estimate air quality between measured streets.</p></div><div style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; padding: 24px"><span style="font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 15px; color: #7A1424">04</span><h3 style="margin: 6px 0 8px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3; color: #0B1A2C">Field monitoring and empirical model development</h3><p style="margin: 0; font-size: 16px; color: #3A4556">Field campaigns that collect the measurements behind the project's empirical models.</p></div></div></section>
+<section style="margin-bottom: 72px">
+<h2 style="margin: 0 0 12px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Monitoring routes</h2>
+<p style="margin: 0 0 24px; color: #3A4556; max-width: 760px">Routes driven by the mobile monitoring unit to build high-resolution pollution maps.</p>
+<div role="img" aria-label="Map placeholder" style="height: 420px; border-radius: 4px; background: #E9EEF3; display: flex; align-items: center; justify-content: center; font-size: 15px; color: #5A6473">[Map of mobile monitoring routes]</div>
+</section>
+<section id="team" style="margin-bottom: 72px">
+<h2 style="margin: 0 0 24px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Project team</h2>
+<div style="background: #FFFFFF; border: 1px solid #E3E1DA; border-radius: 4px; overflow: hidden">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px 40px; padding: 36px 40px 32px">
+<div style="min-width: 0"><h3 style="margin: 0 0 4px; padding-bottom: 10px; border-bottom: 2px solid #7A1424; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A1424">Project lead<span style="margin-left: 8px; color: #8A93A0">1</span></h3><ul style="list-style: none; margin: 0; padding: 0"><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><a href="#/people" style="display: block; font-weight: 600; color: #0B1A2C; text-decoration: none">Sheikh Mokhlesur Rahman</a><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">Principal Investigator · BUET</span></li></ul></div><div style="min-width: 0"><h3 style="margin: 0 0 4px; padding-bottom: 10px; border-bottom: 2px solid #7A1424; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A1424">Research team<span style="margin-left: 8px; color: #8A93A0">1</span></h3><ul style="list-style: none; margin: 0; padding: 0"><li style="padding: 12px 0; border-bottom: 1px solid #ECE9E2"><span style="display: block; font-weight: 600; color: #0B1A2C">[Name]</span><span style="display: block; font-size: 14px; line-height: 1.45; color: #5A6473">[Role] · BUET</span></li></ul></div>
+</div>
+<a href="#/people" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding: 20px 40px; background: #F1F4F7; border-top: 1px solid #E3E1DA; color: #0B1A2C; text-decoration: none">
+<span style="font-size: 16px; color: #3A4556">Profiles, research interests and contact details for the team</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: #1F5A8C">Learn more on the People page <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"></path><path d="M9 4l4 4-4 4"></path></svg></span>
+</a>
+</div>
+</section>
+<section aria-label="Partner institutions" style="margin-bottom: 72px">
+<h2 style="margin: 0 0 20px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Partner institutions</h2>
+<div style="border-top: 1px solid #E3E1DA"><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA; display: flex; flex-wrap: wrap; gap: 4px 24px"><span style="flex: 0 0 160px; font-size: 15px; font-weight: 600; color: #5A6473">Host</span><span style="flex: 1 1 300px">Department of Civil Engineering, BUET</span></div><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA; display: flex; flex-wrap: wrap; gap: 4px 24px"><span style="flex: 0 0 160px; font-size: 15px; font-weight: 600; color: #5A6473">Funder</span><span style="flex: 1 1 300px">Higher Education Acceleration and Transformation (HEAT) Project, University Grants Commission of Bangladesh</span></div></div>
+</section>
+<section id="fellowship" style="background: #FFFFFF; border: 1px solid #E3E1DA; border-top: 4px solid #7A1424; border-radius: 4px; padding: 40px; display: flex; flex-wrap: wrap; gap: 32px 56px; margin-bottom: 72px">
+<div style="flex: 1.5 1 480px; min-width: 0">
+<p style="margin: 0 0 8px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A1424">Open position</p>
+<h2 style="margin: 0 0 12px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.2; color: #0B1A2C">PhD Research Fellowship: mobile air quality monitoring</h2>
+<p style="margin: 0 0 16px; color: #3A4556">One full-time PhD Research Fellow will join the project to work on mobile air quality monitoring.</p>
+<p style="margin: 0; color: #3A4556">Eligible: enrolled full-time PhD students in BUET Civil and Environmental Engineering.</p>
+</div>
+<div style="flex: 1 1 280px"><dl style="margin: 0; border-top: 1px solid #E3E1DA"><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA"><dt style="font-size: 14px; font-weight: 600; color: #5A6473">Stipend</dt><dd style="margin: 2px 0 0">BDT 50,000 per month</dd></div><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA"><dt style="font-size: 14px; font-weight: 600; color: #5A6473">Positions</dt><dd style="margin: 2px 0 0">One, full-time</dd></div><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA"><dt style="font-size: 14px; font-weight: 600; color: #5A6473">Deadline</dt><dd style="margin: 2px 0 0">31 October 2026</dd></div><div style="padding: 14px 0; border-bottom: 1px solid #E3E1DA"><dt style="font-size: 14px; font-weight: 600; color: #5A6473">Queries</dt><dd style="margin: 2px 0 0"><a href="mailto:heat.buet.13125@gmail.com">heat.buet.13125@gmail.com</a></dd></div></dl></div>
+</section>
+<section><h2 style="margin: 0 0 16px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Related news</h2>
+<ul style="list-style: none; margin: 0; padding: 0; border-top: 1px solid #D6D3CA">
+<li style="padding: 16px 0; border-bottom: 1px solid #D6D3CA"><span style="font-size: 14px; color: #5A6473">Deadline 31 October 2026</span><br><a href="#/news-events" style="font-weight: 600">PhD Research Fellowship in mobile air quality monitoring</a></li>
+</ul></section>
+</main>
+
+</div>
+<div class="page" id="p-people" hidden>
+<div id="peopleOverview"></div>
+</div>
+<div class="page" id="p-people-faculty" hidden>
+<div id="people-faculty"></div>
+</div>
+<div class="page" id="p-people-collaborators" hidden>
+<div id="people-collaborators"></div>
+</div>
+<div class="page" id="p-people-members" hidden>
+<div id="people-members"></div>
+</div>
+<div class="page" id="p-people-alumni" hidden>
+<div id="people-alumni"></div>
+</div>
+<div class="page" id="p-news-events" hidden>
+<div id="neOverview"></div>
+</div>
+<div class="page" id="p-news" hidden>
+<div id="newsPage"></div>
+</div>
+<div class="page" id="p-news-item" hidden>
+<div id="newsItem"></div>
+</div>
+<div class="page" id="p-events" hidden>
+<div id="eventsPage"></div>
+</div>
+<div class="page" id="p-network" hidden>
+<section style="background: #0B1A2C; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px">
+<h1 style="margin: 0 0 14px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 52px; line-height: 1.12; max-width: 920px">Researchers’ Network</h1>
+<p style="margin: 0; font-size: 20px; color: #D4DEE9; max-width: 760px">A community for people working on air quality in Bangladesh: sessions, writing and shared resources.</p>
+</div>
+</section>
+<main style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 88px">
+<section class="net-about" aria-labelledby="na-h">
+<div><h2 id="na-h" style="margin: 0 0 12px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; color: #0B1A2C">About the network</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3A4556">[What the network is, who runs it, and who it is for: two or three sentences.]</p></div>
+</section>
+<section aria-labelledby="ns-h" style="margin-bottom: 72px">
+<div class="sec-head"><h2 id="ns-h">Network sessions</h2><a href="#/events">All events <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"></path><path d="M9 4l4 4-4 4"></path></svg></a></div>
+<div id="netSessions" class="ev-grid"></div>
+</section>
+<section aria-label="Blog" style="margin-bottom: 72px">
+<div class="post-grid">
+<article class="post"><div class="post-img" role="img" aria-label="Image placeholder"></div><span class="tag">Blog</span><h3>[Post title]</h3><p class="meta">[Author name] · [Date]</p><p>[One or two sentences summarising the post.]</p><a href="#/network">Read more <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"></path><path d="M9 4l4 4-4 4"></path></svg></a></article>
+<article class="post"><div class="post-img" role="img" aria-label="Image placeholder"></div><span class="tag">Commentary</span><h3>[Post title]</h3><p class="meta">[Author name] · [Date]</p><p>[One or two sentences summarising the post.]</p><a href="#/network">Read more <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"></path><path d="M9 4l4 4-4 4"></path></svg></a></article>
+<article class="post"><div class="post-img" role="img" aria-label="Image placeholder"></div><span class="tag">Field notes</span><h3>[Post title]</h3><p class="meta">[Author name] · [Date]</p><p>[One or two sentences summarising the post.]</p><a href="#/network">Read more <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"></path><path d="M9 4l4 4-4 4"></path></svg></a></article>
+</div>
+</section>
+<section aria-labelledby="nr-h" style="margin-bottom: 72px">
+<div class="sec-head"><h2 id="nr-h">Resources</h2></div>
+<ul class="res-list">
+<li><span class="tag">Data</span><span>[Dataset name and short description]</span></li>
+<li><span class="tag">Tool</span><span>[Tool or model name and short description]</span></li>
+<li><span class="tag">Reading</span><span>[Report or paper, with link]</span></li>
+</ul>
+</section>
+<section id="join" id="register" aria-labelledby="reg-h" style="background: #FFFFFF; border: 1px solid #E3E1DA; border-top: 4px solid #7A1424; border-radius: 4px; padding: 40px; display: flex; flex-wrap: wrap; gap: 32px 56px">
+<div style="flex: 1 1 300px; min-width: 0">
+<h2 id="reg-h" style="margin: 0 0 10px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: #0B1A2C">Join the network</h2>
+<p style="margin: 0; color: #3A4556">Researchers, students and practitioners working on air quality in Bangladesh are welcome to join. Members hear about new sessions, posts and resources.</p>
+</div>
+<div style="flex: 1.4 1 420px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="r-name" style="font-size: 15px; font-weight: 600; color: #0B1A2C">Name</label><input id="r-name" type="text" autocomplete="name" style="font: inherit; font-size: 16px; min-height: 48px; padding: 10px 12px; border: 1px solid #B9B6AC; border-radius: 4px; background: #FFFFFF; color: #1B2433; box-sizing: border-box; width: 100%"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="r-email" style="font-size: 15px; font-weight: 600; color: #0B1A2C">Email</label><input id="r-email" type="email" autocomplete="email" style="font: inherit; font-size: 16px; min-height: 48px; padding: 10px 12px; border: 1px solid #B9B6AC; border-radius: 4px; background: #FFFFFF; color: #1B2433; box-sizing: border-box; width: 100%"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="r-aff" style="font-size: 15px; font-weight: 600; color: #0B1A2C">Affiliation</label><input id="r-aff" type="text" style="font: inherit; font-size: 16px; min-height: 48px; padding: 10px 12px; border: 1px solid #B9B6AC; border-radius: 4px; background: #FFFFFF; color: #1B2433; box-sizing: border-box; width: 100%"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="r-int" style="font-size: 15px; font-weight: 600; color: #0B1A2C">Interested in</label><select id="r-int" style="font: inherit; font-size: 16px; min-height: 48px; padding: 10px 12px; border: 1px solid #B9B6AC; border-radius: 4px; background: #FFFFFF; color: #1B2433; box-sizing: border-box; width: 100%"><option>Webinars and workshops</option><option>Webinars</option><option>Workshops</option></select></div>
+<button type="button" style="grid-column: 1 / -1; justify-self: start; font: inherit; font-weight: 600; min-height: 48px; padding: 12px 24px; border: none; border-radius: 4px; background: #0B1A2C; color: #FFFFFF; cursor: pointer">Submit</button>
+</div>
+</section>
+</main>
+</div>
+<div class="page" id="p-publications" hidden>
+
+<section style="background: #0B1A2C; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px">
+<h1 style="margin: 0 0 14px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 52px; line-height: 1.12; max-width: 920px">Publications</h1>
+<p style="margin: 0; font-size: 20px; color: #D4DEE9; max-width: 760px">Peer-reviewed papers, reports and datasets from ACRL members and projects.</p>
+</div>
+</section>
+<main style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 88px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: end; margin-bottom: 40px">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 6px"><label for="q" style="font-size: 15px; font-weight: 600; color: #0B1A2C">Search</label><input id="q" type="search" placeholder="Title, author or keyword" style="font: inherit; padding: 12px 14px; min-height: 44px; box-sizing: border-box; border: 1px solid #B9B6AC; border-radius: 4px; background: #FFFFFF"></div>
+<div style="flex: 0 1 200px; display: flex; flex-direction: column; gap: 6px"><label for="yr" style="font-size: 15px; font-weight: 600; color: #0B1A2C">Year</label><select id="yr" style="font: inherit; padding: 12px 14px; min-height: 44px; border: 1px solid #B9B6AC; border-radius: 4px; background: #FFFFFF"><option>All years</option><option>2024</option><option>2022</option></select></div>
+<div style="flex: 0 1 220px; display: flex; flex-direction: column; gap: 6px"><label for="ty" style="font-size: 15px; font-weight: 600; color: #0B1A2C">Type</label><select id="ty" style="font: inherit; padding: 12px 14px; min-height: 44px; border: 1px solid #B9B6AC; border-radius: 4px; background: #FFFFFF"><option>All types</option><option>Journal articles</option><option>Conference papers</option><option>Reports</option><option>Datasets</option></select></div>
+</div>
+<section style="display: flex; flex-wrap: wrap; gap: 8px 48px; margin-bottom: 40px"><h2 style="flex: 0 0 120px; margin: 0; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; color: #0B1A2C">2024</h2><ol style="flex: 1 1 600px; list-style: none; margin: 0; padding: 0; border-top: 1px solid #D6D3CA"><li style="padding: 20px 0; border-bottom: 1px solid #D6D3CA"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1352231024001729" style="display: block; font-weight: 600; font-size: 18px; color: #0B1A2C">Contrasting intra-urban variability of ultrafine particle number and fine particle mass concentrations in Dhaka, Bangladesh, and Pittsburgh, USA</a><span style="color: #3A4556">Saha PK, Shovon TM, Rahman SM, Marshall JD, Robinson AL, Presto AA. <span style="font-style: italic">Atmospheric Environment</span> 327, 120497.</span><div style="display: flex; gap: 8px; margin-top: 8px"><span style="font-size: 13px; font-weight: 600; color: #123E63; background: #E3ECF5; padding: 3px 10px; border-radius: 999px">Journal article</span></div></li></ol></section><section style="display: flex; flex-wrap: wrap; gap: 8px 48px; margin-bottom: 40px"><h2 style="flex: 0 0 120px; margin: 0; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 30px; color: #0B1A2C">2022</h2><ol style="flex: 1 1 600px; list-style: none; margin: 0; padding: 0; border-top: 1px solid #D6D3CA"><li style="padding: 20px 0; border-bottom: 1px solid #D6D3CA"><span style="display: block; font-weight: 600; font-size: 18px; color: #0B1A2C">Face mask mandates and risk compensation: an analysis of mobility data during the COVID-19 pandemic in Bangladesh</span><span style="color: #3A4556">Wadud Z, Rahman SM, Enam A. <span style="font-style: italic">BMJ Global Health</span> 7(1).</span><div style="display: flex; gap: 8px; margin-top: 8px"><span style="font-size: 13px; font-weight: 600; color: #123E63; background: #E3ECF5; padding: 3px 10px; border-radius: 999px">Journal article</span></div></li></ol></section>
+<section style="display: flex; flex-wrap: wrap; gap: 8px 48px; margin-bottom: 56px"><h2 style="flex: 0 0 120px; margin: 0; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 24px; color: #0B1A2C">Reports and data</h2><div style="flex: 1 1 600px; background: #FFFFFF; border: 1px dashed #B9B6AC; border-radius: 4px; padding: 24px; color: #3A4556">[Project reports and datasets will be listed here]</div></section>
+</main>
+
+</div>
+
+<footer style="background: #0B1A2C; color: #C9D4E0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 40px; display: flex; flex-wrap: wrap; gap: 40px 56px">
+<div style="flex: 1.2 1 240px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 16px"><span style="background: #FFFFFF; border-radius: 4px; padding: 8px 10px; display: inline-flex"><img src="images/acrl-logo.png" alt="ACRL" style="height: 40px; width: auto"></span><img src="images/buet-logo.png" alt="BUET" style="height: 48px; width: 48px"></div>
+<a href="https://www.linkedin.com/company/air-and-climate-research-lab-buet/" aria-label="ACRL on LinkedIn" style="display: inline-flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 11v5"></path><path d="M8 8v.01"></path><path d="M12 16v-5"></path><path d="M16 16v-3a2 2 0 0 0-4 0"></path></svg>LinkedIn</a>
+</div>
+<nav aria-label="Explore" style="flex: 1 1 160px">
+<h2 style="margin: 0 0 14px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 16px; color: #FFFFFF">Explore</h2>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: 15px"><a href="#/about" style="color: #C9D4E0; text-decoration: none">About</a><a href="#/research" style="color: #C9D4E0; text-decoration: none">Research</a><a href="#/people" style="color: #C9D4E0; text-decoration: none">People</a><a href="#/news-events" style="color: #C9D4E0; text-decoration: none">News &amp; Events</a><a href="#/network" style="color: #C9D4E0; text-decoration: none">Researchers’ Network</a><a href="#/publications" style="color: #C9D4E0; text-decoration: none">Publications</a><a href="#/contact" style="color: #C9D4E0; text-decoration: none">Contact</a></div>
+</nav>
+<div style="flex: 1.4 1 280px">
+<h2 style="margin: 0 0 14px; font-family: Poppins, 'Segoe UI', sans-serif; font-weight: 600; font-size: 16px; color: #FFFFFF">Contact</h2>
+<p style="margin: 0 0 12px; font-size: 15px; line-height: 1.6">Room 652, Dr. Jamilur Reza Choudhury Civil Engineering Building<br>Bangladesh University of Engineering and Technology<br>Dhaka-1000, Bangladesh</p>
+<div style="margin-top: 16px; position: relative; height: 160px; border-radius: 4px; overflow: hidden; background: #13263D; border: 1px solid rgba(255,255,255,0.15)">
+<svg aria-hidden="true" width="100%" height="100%" viewBox="0 0 320 160" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; display: block"><g fill="none" stroke="#24405F" stroke-width="7" stroke-linecap="round"><path d="M-10 52 L330 40"></path><path d="M-10 122 L330 112"></path><path d="M96 -10 L112 170"></path><path d="M228 -10 L214 170"></path></g><g fill="none" stroke="#1E3653" stroke-width="3"><path d="M-10 18 L330 8"></path><path d="M-10 86 L330 76"></path><path d="M40 -10 L52 170"></path><path d="M162 -10 L162 170"></path><path d="M286 -10 L276 170"></path></g><rect x="122" y="60" width="78" height="44" fill="#7A1424" opacity="0.35"></rect></svg>
+<svg aria-hidden="true" width="30" height="38" viewBox="0 0 44 56" style="position: absolute; left: 50%; top: 40%; transform: translate(-50%, -100%)"><path d="M22 0C10 0 0 9.6 0 21.5 0 37 22 56 22 56s22-19 22-34.5C44 9.6 34 0 22 0z" fill="#C0283F"></path><circle cx="22" cy="21" r="8" fill="#FFFFFF"></circle></svg>
+<span style="position: absolute; left: 50%; top: 44%; transform: translateX(-50%); background: #FFFFFF; color: #0B1A2C; font-size: 13px; font-weight: 600; padding: 4px 10px; white-space: nowrap">ACRL, BUET campus</span>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Bangladesh+University+of+Engineering+and+Technology+Dhaka" style="position: absolute; right: 10px; bottom: 10px; background: #1F5A8C; color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 600; padding: 8px 12px; border-radius: 4px">Open in Google Maps</a>
+</div>
+</div>
+</div>
+<div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px 28px; border-top: 1px solid rgba(255,255,255,0.15); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 14px; color: #A9B8C9">
+<span>© 2026 Air and Climate Research Lab, BUET</span>
+<span><a href="https://www.buet.ac.bd/" style="color: #C9D4E0">BUET</a> · Last updated [date]</span>
+</div>
+</footer>
+<dialog id="profile" class="profile" aria-label="Profile"></dialog>
+<script src="content-people.js"></script>
+<script src="content-news.js"></script>
+<script>
+class HeroMap {
+  constructor(canvas){ this.cv = canvas; }
+  /* Animated header: Bangladesh as a drifting PM2.5 field of dots, a breathing sensor
+     network, a glowing border, and faint transboundary inflow from behind the heading. */
+  componentDidMount() {
+    if (!this.cv) return;
+    this.reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    this.tick = 0;
+    this.f = { c: this.cv, ctx: this.cv.getContext('2d'), w: 0, h: 0, dpr: 1 };
+    this.onResize = () => this.resize();
+    window.addEventListener('resize', this.onResize);
+    this.resize();
+    const loop = () => { this.tick += 1; this.drawCombo(); if (!this.reduce) this.raf = requestAnimationFrame(loop); };
+    this.raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+    window.removeEventListener('resize', this.onResize);
+  }
+  resize() {
+    const f = this.f, c = f.c, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    f.w = c.clientWidth; f.h = c.clientHeight;
+    if (!f.w || !f.h) return;
+    c.width = f.w * dpr; c.height = f.h * dpr; f.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    f.dpr = dpr;
+    f.bd = this.initBD(f);
+    this.initDots(f);
+  }
+  initBD(f) {
+    const POLYS = [[[0.1628,0.7747],[0.1635,0.7586],[0.1626,0.7433],[0.1502,0.7024],[0.1421,0.6814],[0.1431,0.6747],[0.1426,0.6718],[0.1388,0.6449],[0.1336,0.6284],[0.131,0.6108],[0.1433,0.5855],[0.1384,0.5814],[0.1242,0.5781],[0.111,0.5737],[0.1078,0.5671],[0.1136,0.5423],[0.1068,0.5325],[0.097,0.5227],[0.0939,0.5187],[0.0907,0.5136],[0.0862,0.5011],[0.0949,0.4749],[0.1071,0.4444],[0.1093,0.4328],[0.1114,0.4126],[0.1125,0.4049],[0.1109,0.3973],[0.098,0.3884],[0.0753,0.3849],[0.0592,0.3775],[0.0497,0.3663],[0.0418,0.3618],[0.0319,0.3651],[0.0193,0.3608],[0.0088,0.3497],[0.0,0.3362],[0.0011,0.3299],[0.0034,0.3215],[0.02,0.2866],[0.0262,0.2856],[0.0406,0.2923],[0.0459,0.2923],[0.0554,0.2785],[0.0686,0.2392],[0.0872,0.2393],[0.1036,0.2406],[0.1147,0.2426],[0.1257,0.2414],[0.1373,0.2382],[0.1436,0.2333],[0.147,0.227],[0.1458,0.2215],[0.1317,0.2141],[0.1262,0.2086],[0.1223,0.1929],[0.1181,0.187],[0.0903,0.1862],[0.0759,0.1789],[0.0679,0.1725],[0.0538,0.1511],[0.0363,0.1352],[0.0196,0.1315],[0.0132,0.1263],[0.0097,0.1182],[0.0117,0.1064],[0.0167,0.0957],[0.0202,0.0838],[0.0335,0.0681],[0.0492,0.0543],[0.0562,0.0449],[0.066,0.035],[0.0672,0.0295],[0.0655,0.0233],[0.0575,0.0173],[0.052,0.0154],[0.0511,0.0115],[0.0549,0.0013],[0.0625,0.0],[0.0784,0.0093],[0.0945,0.0244],[0.1041,0.0378],[0.1044,0.0484],[0.1107,0.0501],[0.117,0.0505],[0.1274,0.0552],[0.1383,0.0538],[0.1453,0.0564],[0.15,0.0555],[0.1518,0.0494],[0.1465,0.0404],[0.1427,0.034],[0.1471,0.0276],[0.152,0.0263],[0.1576,0.0279],[0.1653,0.0337],[0.1708,0.0455],[0.1718,0.0639],[0.1842,0.0805],[0.2005,0.0924],[0.2132,0.0978],[0.2286,0.1017],[0.2418,0.098],[0.2483,0.0863],[0.2454,0.076],[0.2475,0.0667],[0.2527,0.0616],[0.2609,0.0619],[0.2671,0.0692],[0.285,0.109],[0.2813,0.1266],[0.2853,0.1749],[0.2808,0.2068],[0.2815,0.2137],[0.2836,0.219],[0.2867,0.2212],[0.2919,0.2211],[0.3137,0.2272],[0.332,0.2338],[0.3527,0.2398],[0.3827,0.2446],[0.401,0.243],[0.4102,0.2428],[0.4287,0.2443],[0.4775,0.2417],[0.5179,0.2411],[0.5343,0.2456],[0.5474,0.2473],[0.5924,0.2441],[0.6377,0.2425],[0.6623,0.2527],[0.689,0.2692],[0.704,0.2815],[0.7067,0.2886],[0.7051,0.2946],[0.7,0.2979],[0.6908,0.298],[0.6696,0.29],[0.666,0.2924],[0.6664,0.3088],[0.6657,0.3115],[0.6612,0.3262],[0.6485,0.3594],[0.646,0.3742],[0.6433,0.378],[0.64,0.3801],[0.63,0.3807],[0.6222,0.3831],[0.6189,0.3885],[0.6138,0.3997],[0.6104,0.411],[0.6055,0.4145],[0.5938,0.4084],[0.5865,0.4093],[0.5774,0.4119],[0.5683,0.4184],[0.562,0.4264],[0.5548,0.4291],[0.5336,0.4275],[0.5296,0.4286],[0.5269,0.4344],[0.5247,0.4416],[0.5082,0.4586],[0.5019,0.4858],[0.4969,0.5035],[0.4977,0.5173],[0.5117,0.5532],[0.5214,0.5997],[0.5251,0.6045],[0.5284,0.606],[0.5298,0.6049],[0.5296,0.5952],[0.5302,0.5835],[0.5347,0.5808],[0.5405,0.5832],[0.5461,0.5934],[0.5524,0.612],[0.5591,0.6193],[0.5696,0.6213],[0.5815,0.617],[0.5904,0.6085],[0.594,0.5994],[0.5915,0.5815],[0.5909,0.5681],[0.5966,0.5553],[0.617,0.5363],[0.62,0.5305],[0.6187,0.5143],[0.6187,0.4991],[0.6264,0.4981],[0.6368,0.5006],[0.65,0.4931],[0.654,0.4929],[0.6595,0.5009],[0.6688,0.4995],[0.6757,0.5326],[0.6828,0.5618],[0.6827,0.5759],[0.6839,0.6057],[0.6871,0.6301],[0.6921,0.6356],[0.698,0.6486],[0.7034,0.6637],[0.7077,0.6722],[0.7106,0.6998],[0.7141,0.7198],[0.7187,0.7825],[0.7209,0.7946],[0.7222,0.8011],[0.7224,0.8584],[0.7238,0.8829],[0.7289,0.9031],[0.7299,0.9108],[0.7248,0.917],[0.7199,0.9182],[0.7152,0.9084],[0.7046,0.901],[0.6889,0.893],[0.6822,0.8877],[0.6741,0.8898],[0.6628,0.9018],[0.6583,0.913],[0.6603,0.9288],[0.6639,0.9443],[0.6717,0.9531],[0.6724,0.9629],[0.6752,0.9756],[0.6792,0.9872],[0.6812,0.9998],[0.6786,1.0],[0.6691,0.9839],[0.6607,0.9665],[0.6387,0.9335],[0.6316,0.8744],[0.6311,0.8453],[0.6161,0.811],[0.6061,0.7635],[0.6021,0.7512],[0.6073,0.7359],[0.6082,0.7301],[0.6054,0.7314],[0.5977,0.7393],[0.5877,0.7204],[0.5812,0.7035],[0.5554,0.6684],[0.5478,0.6528],[0.5475,0.6377],[0.5363,0.6529],[0.5212,0.6636],[0.5057,0.6797],[0.4954,0.6846],[0.4628,0.6875],[0.444,0.666],[0.417,0.6134],[0.4134,0.6015],[0.417,0.5706],[0.4106,0.5413],[0.4107,0.5258],[0.4087,0.5155],[0.4039,0.5178],[0.402,0.5249],[0.403,0.5358],[0.4011,0.5449],[0.3777,0.5431],[0.3557,0.5389],[0.3751,0.5543],[0.3959,0.5579],[0.4067,0.5717],[0.408,0.5825],[0.4073,0.5946],[0.3967,0.6031],[0.3869,0.6085],[0.3887,0.6201],[0.4005,0.6342],[0.3862,0.6382],[0.3823,0.6475],[0.382,0.6607],[0.3892,0.6723],[0.392,0.681],[0.3903,0.6889],[0.3973,0.6975],[0.4074,0.7154],[0.4107,0.7281],[0.4064,0.7461],[0.4006,0.753],[0.3913,0.7598],[0.3694,0.7824],[0.3587,0.8082],[0.3496,0.8202],[0.3382,0.8225],[0.3338,0.8172],[0.3243,0.8103],[0.3242,0.7977],[0.327,0.7877],[0.3463,0.7637],[0.3358,0.7669],[0.3239,0.7738],[0.3058,0.7868],[0.3001,0.7707],[0.2963,0.7557],[0.2963,0.7374],[0.3107,0.7101],[0.2943,0.7237],[0.2898,0.7408],[0.2918,0.7608],[0.2897,0.775],[0.2833,0.7936],[0.2746,0.8048],[0.2604,0.8119],[0.2542,0.8229],[0.2447,0.831],[0.2444,0.8149],[0.2414,0.7936],[0.2312,0.7431],[0.229,0.7539],[0.2343,0.7853],[0.234,0.8056],[0.2263,0.8217],[0.2107,0.839],[0.1988,0.8415],[0.1918,0.8388],[0.1811,0.8281],[0.1696,0.8128],[0.1676,0.7882],[0.1628,0.7747]],[[0.4362,0.7753],[0.4087,0.7814],[0.3946,0.7795],[0.4208,0.7341],[0.42,0.7138],[0.4159,0.6972],[0.4025,0.6839],[0.4018,0.6744],[0.3958,0.6615],[0.3927,0.6463],[0.4075,0.6414],[0.4195,0.6501],[0.4212,0.6549],[0.4238,0.6673],[0.4298,0.6803],[0.4506,0.7069],[0.4502,0.7232],[0.4445,0.7631],[0.4362,0.7753]],[[0.5596,0.7247],[0.5523,0.7297],[0.5454,0.7253],[0.5366,0.7085],[0.541,0.6872],[0.5437,0.6841],[0.5481,0.691],[0.5543,0.7059],[0.5583,0.7172],[0.5596,0.7247]],[[0.6218,0.8759],[0.6122,0.8767],[0.6076,0.8716],[0.6098,0.8644],[0.6072,0.8411],[0.6152,0.8387],[0.6194,0.8388],[0.6217,0.8457],[0.6238,0.8583],[0.6218,0.8759]],[[0.6099,0.8198],[0.6041,0.834],[0.6013,0.8237],[0.6037,0.8106],[0.6062,0.8034],[0.6079,0.8035],[0.6112,0.8109],[0.6099,0.8198]]];
+    const SITES = [[0.378,0.4777],[0.6029,0.732],[0.0913,0.3808],[0.2402,0.6437],[0.6093,0.2909],[0.3717,0.6697],[0.3764,0.3151],[0.1974,0.1438],[0.0977,0.1629],[0.6267,0.8859],[0.5,0.5382],[0.1879,0.5884],[0.2133,0.2978],[0.2877,0.5123],[0.1927,0.4448],[0.4873,0.6403],[0.3004,0.4016],[0.1737,0.4621],[0.3923,0.5105],[0.3796,0.4448]];
+    const narrow = f.w < 760;
+    const s = Math.min(f.h * 1.05, f.w * (narrow ? 1.2 : .6) / .73);
+    const x0 = narrow ? f.w - s * .73 * .8 : f.w - s * .73 - Math.max(24, f.w * .07);
+    const y0 = (f.h - s) / 2 + 8;
+    const P = (p) => [x0 + p[0] * s, y0 + p[1] * s];
+    const path = new Path2D();
+    for (const poly of POLYS) poly.forEach((p, i) => { const q = P(p); if (i) path.lineTo(q[0], q[1]); else path.moveTo(q[0], q[1]); });
+    const nodes = SITES.map((p) => { const q = P(p); return { x: q[0], y: q[1], ph: Math.random() }; });
+    let tries = 0;
+    while (nodes.length < SITES.length + 16 && tries++ < 4000) {
+      const x = x0 + Math.random() * s * .73, y = y0 + Math.random() * s;
+      if (f.ctx.isPointInPath(path, x * f.dpr, y * f.dpr) && nodes.every((n) => Math.hypot(n.x - x, n.y - y) > s * .045)) nodes.push({ x: x, y: y, ph: Math.random(), rural: true });
+    }
+    const seen = new Set(), links = [];
+    nodes.forEach((a, i) => {
+      nodes.map((b, j) => [j, Math.hypot(a.x - b.x, a.y - b.y)]).filter((p) => p[0] !== i).sort((p, q) => p[1] - q[1]).slice(0, 2)
+        .forEach((p) => { const j = p[0], k = i < j ? i + '-' + j : j + '-' + i; if (!seen.has(k)) { seen.add(k); links.push([i, j]); } });
+    });
+    return { path: path, nodes: nodes, links: links, alpha: narrow ? .35 : 1 };
+  }
+  initDots(f) {
+    const B = f.bd, dots = [], gap = f.w < 760 ? 9 : 10;
+    const xs = B.nodes.map((n) => n.x), ys = B.nodes.map((n) => n.y);
+    const minX = Math.max(0, Math.min(...xs) - 60), maxX = Math.min(f.w, Math.max(...xs) + 60);
+    const minY = Math.max(0, Math.min(...ys) - 60), maxY = Math.min(f.h, Math.max(...ys) + 60);
+    for (let y = minY; y < maxY; y += gap) for (let x = minX; x < maxX; x += gap)
+      if (f.ctx.isPointInPath(B.path, x * f.dpr, y * f.dpr)) dots.push({ x: x, y: y, j: Math.random() });
+    B.dots = dots; B.hub = B.nodes[0]; B.scale = Math.max(maxY - minY, 1);
+    const dx = dots.map((d) => d.x), dy = dots.map((d) => d.y);
+    B.box = { x0: Math.min(...dx), x1: Math.max(...dx), y0: Math.min(...dy), y1: Math.max(...dy) };
+    B.tb = [];
+  }
+  fieldAt(B, x, y, T) {
+    const wave = (Math.sin(x * .011 + T) + Math.sin(y * .014 - T * .7) + Math.sin((x + y) * .006 + T * .5)) / 3;
+    const R = B.scale * .16, hot = Math.exp(-((x - B.hub.x) ** 2 + (y - B.hub.y) ** 2) / (2 * R * R));
+    return Math.min(1, Math.max(0, .42 + .36 * wave + .5 * hot));
+  }
+  drawCombo() {
+    const f = this.f, B = f && f.bd; if (!B || !B.dots || !B.dots.length) return;
+    const ctx = f.ctx, N = B.nodes, T = this.tick * .006, reduce = this.reduce;
+    const SNOW = '255,255,255', SKY = '169,196,222', HOT = '214,82,104';
+    const bob = reduce ? 0 : Math.sin(this.tick * .012) * 4;
+    ctx.clearRect(0, 0, f.w, f.h);
+    ctx.globalAlpha = B.alpha;
+    ctx.save(); ctx.translate(-10000, 0);
+    ctx.shadowColor = 'rgba(0,0,0,.6)'; ctx.shadowBlur = 44; ctx.shadowOffsetX = 10000; ctx.shadowOffsetY = 22 - bob * .5;
+    ctx.fillStyle = '#000'; ctx.fill(B.path); ctx.restore();
+    ctx.save(); ctx.translate(0, bob);
+    ctx.lineJoin = 'round';
+    ctx.shadowColor = 'rgba(' + SKY + ',.55)'; ctx.shadowBlur = 14;
+    ctx.strokeStyle = 'rgba(' + SKY + ',.22)'; ctx.lineWidth = 1.2; ctx.stroke(B.path);
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = 'rgba(' + SKY + ',.025)'; ctx.fill(B.path);
+    for (const d of B.dots) {
+      const n = Math.min(1, Math.max(0, this.fieldAt(B, d.x, d.y, T) + (d.j - .5) * .08)), sz = 1.1 + n * 1.7;
+      ctx.fillStyle = n > .86 ? 'rgba(' + HOT + ',' + (.3 + (n - .86) * 2.5) + ')' : 'rgba(' + (n > .62 ? SNOW : SKY) + ',' + (.1 + n * .4) + ')';
+      ctx.fillRect(d.x - sz / 2, d.y - sz / 2, sz, sz);
+    }
+    const bx = B.box, bw = bx.x1 - bx.x0, bh = bx.y1 - bx.y0;
+    if (!reduce && this.tick % 4 === 0 && B.tb.length < 46) {
+      const sp = .45 + Math.random() * .35, fromX = Math.max(40, f.w * .06);
+      B.tb.push({ x: fromX + Math.random() * (bx.x0 - 30 - fromX), y: bx.y0 + bh * (.12 + Math.random() * .5), vx: sp, vy: sp * (.12 + Math.random() * .2), end: bx.x0 + bw * (.25 + Math.random() * .2), a: .25 + Math.random() * .25 });
+    }
+    ctx.lineCap = 'round'; ctx.lineWidth = 1.2;
+    for (const p of B.tb) {
+      if (!reduce) { p.x += p.vx; p.y += p.vy + Math.sin((p.x + this.tick) * .01) * .05; }
+      if (p.x0 === undefined) p.x0 = p.x;
+      const sx = p.x - p.vx * 22, prog = (p.x - p.x0) / Math.max(1, p.end - p.x0);
+      const fade = Math.max(0, Math.min(1, prog * 4, (1 - prog) * 2.2));
+      const g = ctx.createLinearGradient(sx, 0, p.x, 0);
+      g.addColorStop(0, 'rgba(' + SKY + ',0)'); g.addColorStop(1, 'rgba(' + SKY + ',' + (p.a * fade) + ')');
+      ctx.strokeStyle = g; ctx.beginPath(); ctx.moveTo(sx, p.y - p.vy * 22); ctx.lineTo(p.x, p.y); ctx.stroke();
+    }
+    B.tb = B.tb.filter((p) => p.x < p.end);
+    ctx.strokeStyle = 'rgba(' + SKY + ',.1)'; ctx.lineWidth = 1;
+    for (const l of B.links) { ctx.beginPath(); ctx.moveTo(N[l[0]].x, N[l[0]].y); ctx.lineTo(N[l[1]].x, N[l[1]].y); ctx.stroke(); }
+    N.forEach((n, i) => {
+      const v = this.fieldAt(B, n.x, n.y, T), high = v > .72, hub = i === 0;
+      const br = reduce ? .5 : .5 + .5 * Math.sin(this.tick * .03 + n.ph * 6.283);
+      const r0 = hub ? 8 : n.rural ? 4 : 5, amp = hub ? 6 : high ? 7 : 4;
+      ctx.strokeStyle = high && !hub ? 'rgba(' + HOT + ',' + (.35 + .35 * br) + ')' : 'rgba(' + SNOW + ',' + (.18 + .22 * br) + ')';
+      ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(n.x, n.y, r0 + amp * br, 0, 6.283); ctx.stroke();
+      ctx.fillStyle = high && !hub ? 'rgba(' + HOT + ',.95)' : 'rgba(' + SNOW + ',' + (n.rural ? .55 : .9) + ')';
+      ctx.beginPath(); ctx.arc(n.x, n.y, hub ? 3.2 : n.rural ? 1.9 : 2.5, 0, 6.283); ctx.fill();
+    });
+    ctx.restore();
+    ctx.globalAlpha = 1;
+  }
+}
+
+
+const imgUrl = (n) => n ? "images/" + n : "";
+const PEOPLE = window.PEOPLE || [];
+const NEWS = window.NEWS || [];
+const EVENTS = window.EVENTS || [];
+/* =================== CONTENT =================== */
+const ROLE_ORDER = ["Principal Investigator", "Co-Principal Investigator", "Advisor", "Resource Person", "Collaborator"];
+/* =================== HELPERS =================== */
+const $ = (s, r = document) => r.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const fmt = (d, o) => new Date(d + "T00:00:00").toLocaleDateString("en-GB", o || { day: "numeric", month: "long", year: "numeric" });
+const ARROW = '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10"></path><path d="M9 4l4 4-4 4"></path></svg>';
+const initials = (n) => /^\[/.test(n) ? "" : n.replace(/,.*$/, "").replace(/^Dr\.\s*/, "").split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).slice(0, 2).map((w) => w[0]).join("").toUpperCase() || "?";
+const photo = (p) => (p.photo ? imgUrl(p.photo) : "");
+const hero = (title, sub, crumbs) => `<section style="background:#0B1A2C;color:#fff"><div style="max-width:1200px;margin:0 auto;padding:64px 24px 72px">${crumbs ? `<nav aria-label="Breadcrumb" class="crumbs">${crumbs.map(([t, h]) => `<a href="${h}">${t}</a>`).join(' <span aria-hidden="true">/</span> ')}</nav>` : ""}<h1 style="margin:0 0 14px;font-family:Poppins,'Segoe UI',sans-serif;font-weight:600;font-size:52px;line-height:1.12;max-width:920px">${title}</h1><p style="margin:0;font-size:20px;color:#D4DEE9;max-width:760px">${sub}</p></div></section>`;
+const tagFor = (t) => `<span class="tag ${t === "Opportunity" ? "opp" : t === "Event" ? "ev" : ""}">${t}</span>`;
+
+/* =================== PEOPLE =================== */
+const byGroup = (g) => PEOPLE.map((p, i) => ({ ...p, i })).filter((p) => p.group === g);
+const card = (p) => {
+  const av = p.photo ? `<img class="avatar" src="${photo(p)}" alt="Portrait of ${esc(p.name)}" loading="lazy">` : `<span class="avatar" aria-hidden="true">${initials(p.name)}</span>`;
+  return `<button type="button" class="pcard reveal-item" style="--i:${p.k || 0}" data-person="${p.i}">${av}<span class="nm">${esc(p.name)}</span><span class="rl">${esc(p.role)}</span><span class="af">${esc(p.aff)}</span></button>`;
+};
+const grid = (list) => `<div class="ppl-grid reveal-group">${list.map((p, k) => card({ ...p, k })).join("")}</div>`;
+const group = (title, list, note) => list.length ? `<section class="grp"><h2>${title}</h2>${note ? `<p class="note">${note}</p>` : ""}${grid(list)}</section>` : "";
+const PEOPLE_PAGES = {
+  faculty: ["Faculty", "BUET faculty who lead and carry out the lab’s research.", () => group("Faculty", byGroup("Faculty"))],
+  collaborators: ["Collaborators", "Researchers from other institutions who work with the lab as investigators, advisors and resource persons.", () => {
+    const list = byGroup("Collaborators").sort((a, b) => (ROLE_ORDER.indexOf(a.role) + 99) % 99 - (ROLE_ORDER.indexOf(b.role) + 99) % 99);
+    return group("Collaborators", list, "Each person’s role in the lab’s projects is shown under their name.");
+  }],
+  members: ["Lab members", "Research assistants, project managers, research fellows and technical staff working in the lab.", () =>
+    group("Lab members", byGroup("Members"), "Research assistants and project managers.") + group("Research fellows", byGroup("Research Fellows")) + group("Technical and support staff", byGroup("Field Staff"))],
+  alumni: ["Alumni", "Former research assistants, project managers, fellows and staff.", () => group("Alumni", byGroup("Alumni"))]
+};
+function renderPeople() {
+  Object.entries(PEOPLE_PAGES).forEach(([k, [t, sub, fn]]) => {
+    $("#people-" + k).innerHTML = hero(t, sub, [["People", "#/people"], [t, "#/people/" + k]]) + `<div class="ppl-wrap">${fn()}</div>`;
+  });
+  const lead = PEOPLE.find((p) => /Rahman/.test(p.name));
+  const counts = { faculty: byGroup("Faculty"), collaborators: byGroup("Collaborators"), members: [...byGroup("Members"), ...byGroup("Research Fellows"), ...byGroup("Field Staff")], alumni: byGroup("Alumni") };
+  const stack = (l) => `<div class="stack" aria-hidden="true">${l.slice(0, 4).map((p) => p.photo ? `<span style="background-image:url(${photo(p)})"></span>` : `<span>${initials(p.name)}</span>`).join("")}</div>`;
+  const real = (l) => l.filter((p) => !/^\[/.test(p.name)).length;
+  $("#peopleOverview").innerHTML = hero("People", "Faculty, collaborators, lab members and alumni of the Air and Climate Research Lab.") + `<div class="ppl-wrap">
+    <section class="lead" aria-label="Lab lead">${lead.photo ? `<img src="${photo(lead)}" alt="Portrait of ${esc(lead.name)}">` : ""}<div><p class="eyebrow">Lab lead</p><h2>${esc(lead.name)}</h2><p style="margin:0 0 14px;color:#5A6473">Professor, Department of Civil Engineering, BUET</p><p style="margin:0 0 18px;color:#3A4556">${esc(lead.bio)}</p><button type="button" class="btn-navy" data-person="${PEOPLE.indexOf(lead)}" style="border:0;cursor:pointer;font:inherit;font-weight:600">View profile</button></div></section>
+    <h2 style="margin:0 0 20px;font:600 28px Poppins,'Segoe UI',sans-serif;color:#0B1A2C">Meet the lab</h2>
+    <div class="sub-cards reveal-group">${Object.entries(PEOPLE_PAGES).map(([k, [t, sub]], i) => `<a class="sub-card reveal-item" style="--i:${i}" href="#/people/${k}"><h3>${t} ${ARROW}</h3><p style="margin:0;font-size:16px;color:#3A4556">${sub}</p>${stack(counts[k])}<span class="cnt">${real(counts[k]) ? real(counts[k]) + " listed" : "To be added"}</span></a>`).join("")}</div></div>`;
+}
+function openProfile(i) {
+  const p = PEOPLE[i], d = $("#profile");
+  const links = [...(p.email ? [["Email", "mailto:" + p.email]] : []), ...(p.links || [])];
+  d.innerHTML = `<div class="prof"><div class="prof-ph" ${p.photo ? `style="background-image:url(${photo(p)})" role="img" aria-label="Portrait of ${esc(p.name)}"` : 'aria-hidden="true"'}>${p.photo ? "" : initials(p.name)}</div>
+    <div class="prof-bd"><button type="button" class="x" aria-label="Close profile"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l8 8"></path><path d="M12 4l-8 8"></path></svg></button>
+    <h2>${esc(p.name)}</h2><p class="r">${esc(p.role)}, ${esc(p.aff)}</p><p style="margin:0 0 20px;line-height:1.7">${esc(p.bio)}</p>
+    ${(p.tags || []).length ? `<div class="prof-tags">${p.tags.map((t) => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
+    ${links.length ? `<div class="prof-links">${links.map(([l, u]) => `<a href="${esc(u)}" ${u.startsWith("http") ? 'target="_blank" rel="noopener"' : ""}>${esc(l)}</a>`).join("")}</div>` : ""}</div></div>`;
+  $(".x", d).onclick = () => d.close();
+  d.showModal();
+}
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-person]"); if (b) openProfile(+b.dataset.person); });
+$("#profile").addEventListener("click", (e) => { if (e.target.id === "profile") e.target.close(); });
+
+/* =================== NEWS & EVENTS =================== */
+const newsItem = (n, feature) => {
+  const d = n.status === "Closed" ? "Closed " + fmt(n.date) : fmt(n.date);
+  const th = n.img ? `<div class="thumb ${n.imgTop ? "top" : ""}" role="img" aria-label="${esc(n.title)}" style="background-image:url(${imgUrl(n.img)})"></div>` : "";
+  return `<article class="nitem reveal-item ${feature ? "feature" : ""}">${th}<div><div class="m">${tagFor(n.type)}${n.status ? `<span class="tag ${n.status.toLowerCase()}">${n.status}</span>` : ""}<span>${d}</span></div><h3><a href="#/news/${n.slug}">${esc(n.title)}</a></h3><p>${esc(n.text)}</p><a href="#/news/${n.slug}">Read more</a></div></article>`;
+};
+const upcoming = () => EVENTS.filter((e) => !e.past);
+const pastEv = () => EVENTS.filter((e) => e.past).sort((a, b) => b.date.localeCompare(a.date));
+const evCard = (e) => {
+  const mo = e.date ? fmt(e.date, { month: "short" }) : "Date", dy = e.date ? new Date(e.date + "T00:00:00").getDate() : "TBA";
+  return `<article class="evc reveal-item"><div class="badge" aria-hidden="true"><span class="mo">${mo}</span><span class="dy" style="${e.date ? "" : "font-size:16px;padding:10px 0"}">${dy}</span></div><div><span class="tag ev">${e.kind}</span><h3>${esc(e.title)}</h3><p>${esc(e.who)}</p><p>${esc(e.where)}</p>${e.reg ? `<a href="${e.reg}" style="font-weight:600">Register</a>` : ""}</div></article>`;
+};
+function renderNE() {
+  const news = [...NEWS].sort((a, b) => b.date.localeCompare(a.date));
+  $("#newsPage").innerHTML = hero("News", "Announcements, open calls, visitors and lab updates.", [["News & Events", "#/news-events"], ["News", "#/news"]]) +
+    `<div class="ne-wrap">${openCalls(news)}<div class="box reveal-group">${news.filter((n) => n.status !== "Open").map((n, i) => newsItem(n, i === 0)).join("")}</div></div>`;
+  $("#eventsPage").innerHTML = hero("Events", "Workshops, webinars, seminars and trainings hosted or co-hosted by the lab.", [["News & Events", "#/news-events"], ["Events", "#/events"]]) +
+    `<div class="ne-wrap"><section aria-labelledby="up-h" style="margin-bottom:64px"><div class="sec-head"><h2 id="up-h">Upcoming</h2></div><div class="ev-grid reveal-group">${upcoming().map(evCard).join("") || "<p>No upcoming events right now.</p>"}</div></section>
+    <section aria-labelledby="pe-h"><div class="sec-head"><h2 id="pe-h">Past events</h2></div><ul class="past">${pastEv().map((e) => `<li><span class="d">${fmt(e.date)}</span><span class="t"><strong>${esc(e.title)}</strong><span>${esc(e.where)}</span></span><span class="tag ev">${e.kind}</span></li>`).join("")}</ul></section></div>`;
+  $("#neOverview").innerHTML = hero("News & Events", "What is happening at the lab: announcements, opportunities and upcoming sessions.") +
+    `<div class="ne-wrap">${openCalls(news)}<div class="ne-cols"><section class="box" aria-labelledby="nn-h"><h2 id="nn-h">News</h2><p class="lede">Latest announcements and open calls.</p><ul class="mini">${news.slice(0, 3).map((n) => `<li class="${n.status === "Open" ? "hot" : ""}"><div class="m">${tagFor(n.type)}${n.status ? `<span class="tag ${n.status.toLowerCase()}">${n.status}</span>` : ""}<span>${n.status === "Open" && n.deadline ? "Apply by " + fmt(n.deadline) : fmt(n.date)}</span></div><strong><a href="#/news/${n.slug}" style="color:inherit;text-decoration:none">${esc(n.title)}</a></strong></li>`).join("")}</ul><a class="more" href="#/news">All news ${ARROW}</a></section>
+    <section class="box" aria-labelledby="ee-h"><h2 id="ee-h">Events</h2><p class="lede">Upcoming workshops and webinars.</p><ul class="mini">${upcoming().map((e) => `<li><div class="m"><span class="tag ev">${e.kind}</span><span>${e.date ? fmt(e.date) : "Date to be announced"}</span></div><strong>${esc(e.title)}</strong></li>`).join("")}</ul><a class="more" href="#/events">All events ${ARROW}</a></section></div></div>`;
+  $("#netSessions").innerHTML = EVENTS.filter((e) => e.network && !e.past).map(evCard).join("");
+}
+
+const openCalls = (news) => {
+  const open = news.filter((n) => n.status === "Open");
+  if (!open.length) return "";
+  return `<section class="open-calls" aria-labelledby="oc-h"><h2 id="oc-h">Open now: opportunities and calls</h2>${open.map((n) => `<article class="call"><div><div>${tagFor(n.type)} <span class="tag open">Open</span></div><h3><a href="#/news/${n.slug}">${esc(n.title)}</a></h3><p>${esc(n.text)}</p></div><div><p class="dl"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"></circle><path d="M8 4.5V8l2.5 1.5"></path></svg>${n.deadline ? "Apply by " + fmt(n.deadline) : "Open"}</p><div class="acts" style="margin-top:10px">${n.link ? `<a class="btn-acc" href="${n.link}">${n.linkText || "Details"}</a>` : ""}<a class="btn-line" href="#/news/${n.slug}">Read the call</a></div></div></article>`).join("")}</section>`;
+};
+function renderStory(slug) {
+  const n = NEWS.find((x) => x.slug === slug);
+  if (!n) return false;
+  const d = n.status === "Closed" ? "Closed " + fmt(n.date) : fmt(n.date);
+  $("#newsItem").innerHTML = hero(esc(n.title), "", [["News & Events", "#/news-events"], ["News", "#/news"]]) +
+    `<article class="story"><div class="m">${tagFor(n.type)}${n.status ? `<span class="tag ${n.status.toLowerCase()}">${n.status}</span>` : ""}<span>${d}</span></div>
+    ${n.status === "Open" ? `<div class="callbox"><strong style="color:#7A1424;font-size:18px">${n.deadline ? "Applications close " + fmt(n.deadline) : "Open now"}</strong>${n.link ? `<a class="btn-acc" href="${n.link}">${n.linkText || "Details"}</a>` : ""}</div>` : ""}
+    ${n.img ? `<img src="${imgUrl(n.img)}" alt="${esc(n.title)}">` : ""}<p>${esc(n.text)}</p><p style="color:#5A6473">[Full story text to be added.]</p>
+    ${n.link && n.status !== "Open" ? `<p><a href="${n.link}" style="font-weight:600">${n.linkText || "Details"}</a></p>` : ""}
+    <a class="back" href="#/news"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"></path></svg>All news</a></article>`;
+  return true;
+}
+
+/* =================== CONTACT DIRECTORY =================== */
+function renderDirectory() {
+  const order = ["Faculty", "Collaborators", "Members", "Research Fellows", "Field Staff"];
+  const head = $("#dirBody").closest("table").querySelector("thead tr");
+  if (head && head.children.length === 3) { const th = head.children[1].cloneNode(true); th.textContent = "Role"; head.children[1].after(th); }
+  $("#dirBody").innerHTML = PEOPLE.filter((p) => p.email && order.includes(p.group)).sort((a, b) => order.indexOf(a.group) - order.indexOf(b.group))
+    .map((p) => `<tr><td style="padding:16px 16px 16px 0;border-bottom:1px solid #E3E1DA;font-weight:600;color:#0B1A2C">${esc(p.name)}</td><td style="padding:16px 16px 16px 0;border-bottom:1px solid #E3E1DA;color:#3A4556">${esc(p.title || p.aff)}</td><td style="padding:16px 16px 16px 0;border-bottom:1px solid #E3E1DA;color:#3A4556">${esc(p.role)}</td><td style="padding:16px 0;border-bottom:1px solid #E3E1DA"><a href="mailto:${esc(p.email)}">${esc(p.email)}</a></td></tr>`).join("");
+}
+
+/* =================== PUBLICATIONS FILTER =================== */
+function setupPubs() {
+  const pg = $("#p-publications"), q = $("#q", pg), yr = $("#yr", pg), ty = $("#ty", pg);
+  if (!q) return;
+  const apply = () => {
+    const s = q.value.trim().toLowerCase(), y = yr.value, t = ty.value;
+    pg.querySelectorAll("main section").forEach((sec) => {
+      const h = sec.querySelector("h2"), items = sec.querySelectorAll("li");
+      if (!items.length) return;
+      let shown = 0;
+      items.forEach((li) => {
+        const typ = [...li.querySelectorAll("div span")].map((x) => x.textContent).join(" ");
+        const ok = (!s || li.textContent.toLowerCase().includes(s)) && (y === "All years" || h.textContent.trim() === y) && (t === "All types" || typ.toLowerCase().includes(t.toLowerCase().replace(/s$/, "")));
+        li.hidden = !ok; shown += ok;
+      });
+      sec.hidden = !shown;
+    });
+  };
+  [q, yr, ty].forEach((el) => el.addEventListener("input", apply));
+}
+
+/* =================== REVEAL ON SCROLL =================== */
+const io = "IntersectionObserver" in window ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.01, rootMargin: "0px 0px -8% 0px" }) : null;
+function observe(scope) { scope.querySelectorAll(".reveal-group,.hww,.areas2").forEach((el) => io ? io.observe(el) : el.classList.add("in")); }
+
+/* =================== ROUTER + NAV =================== */
+const ROUTES = { "/": "home", "/about": "about", "/contact": "contact", "/research": "research", "/research/projects": "research-projects",
+  "/research/projects/aqm": "aqm", "/research/projects/heat": "heat", "/people": "people", "/people/faculty": "people-faculty",
+  "/people/collaborators": "people-collaborators", "/people/members": "people-members", "/people/alumni": "people-alumni",
+  "/news-events": "news-events", "/news": "news", "/news-item": "news-item", "/events": "events", "/network": "network", "/publications": "publications" };
+const TITLES = { "news-item": "News", home: "", about: "About", contact: "Contact", research: "Research", "research-projects": "Projects", aqm: "Air quality management project", heat: "HEAT mobile monitoring project", people: "People", "people-faculty": "Faculty", "people-collaborators": "Collaborators", "people-members": "Lab members", "people-alumni": "Alumni", "news-events": "News & Events", news: "News", events: "Events", network: "Air Quality Researchers’ Network", publications: "Publications" };
+const TOP = { "news-item": "ne", home: "home", about: "home", contact: "home", research: "research", "research-projects": "research", aqm: "research", heat: "research", people: "people", news: "ne", events: "ne", "news-events": "ne", network: "network", publications: "publications" };
+let map = null;
+function route() {
+  const raw = location.hash.replace(/^#/, "") || "/";
+  let [path, anchor] = raw.split("~");
+  if (path.startsWith("/news/") && renderStory(path.slice(6))) path = "/news-item";
+  const id = ROUTES[path] || "home";
+  document.querySelectorAll(".page").forEach((p) => (p.hidden = p.id !== "p-" + id));
+  const top = TOP[id] || (id.startsWith("people") ? "people" : "home");
+  document.querySelectorAll(".nav>ul>li").forEach((li) => li.classList.toggle("active", li.dataset.top === top));
+  document.querySelectorAll(".nav a").forEach((a) => { const cur = a.getAttribute("href") === "#" + path; a.classList.toggle("cur", cur); cur ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"); });
+  document.title = (TITLES[id] ? TITLES[id] + " | " : "") + "Air and Climate Research Lab, BUET";
+  $("#nav").classList.remove("open"); $(".menu-btn").setAttribute("aria-expanded", "false");
+  document.querySelectorAll(".nav li.open").forEach((li) => li.classList.remove("open"));
+  const pg = $("#p-" + id);
+  observe(pg);
+  if (id === "home" && map) map.resize();
+  const target = anchor && document.getElementById(anchor);
+  if (target) target.scrollIntoView(); else window.scrollTo(0, 0);
+}
+$(".menu-btn").addEventListener("click", (e) => { const n = $("#nav"), o = n.classList.toggle("open"); e.currentTarget.setAttribute("aria-expanded", o); });
+document.querySelectorAll(".sub-toggle").forEach((b) => b.addEventListener("click", () => { const li = b.closest("li"), o = li.classList.toggle("open"); b.setAttribute("aria-expanded", o); }));
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") document.querySelectorAll(".nav li.open").forEach((li) => li.classList.remove("open")); });
+
+/* =================== START =================== */
+document.querySelectorAll("img[data-img]").forEach((im) => (im.src = imgUrl(im.dataset.img)));
+renderPeople(); renderNE(); renderDirectory(); setupPubs();
+window.addEventListener("hashchange", route);
+const cv = document.getElementById("heroMap");
+if (cv) { map = new HeroMap(cv); map.componentDidMount(); }
+route();
+
+</script>
+</body>
+</html>
